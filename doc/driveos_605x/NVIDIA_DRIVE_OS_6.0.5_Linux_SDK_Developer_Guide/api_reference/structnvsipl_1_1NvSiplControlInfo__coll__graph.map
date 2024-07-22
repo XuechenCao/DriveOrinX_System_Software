@@ -1,0 +1,6 @@
+<map id="nvsipl::NvSiplControlInfo" name="nvsipl::NvSiplControlInfo">
+<area shape="rect" id="node1" title="Defines the control info." alt="" coords="131,213,293,240"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPGlobalToneMapInfo.html" title="Defines the global tone map spline." alt="" coords="11,109,194,151"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPSplineControlPoint.html" title="Defines a spline control point." alt="" coords="5,5,200,47"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1SiplControlAutoAwbGain.html" title="Color Gains assuming order RGGB, RCCB, RCCC." alt="" coords="219,117,421,143"/>
+</map>

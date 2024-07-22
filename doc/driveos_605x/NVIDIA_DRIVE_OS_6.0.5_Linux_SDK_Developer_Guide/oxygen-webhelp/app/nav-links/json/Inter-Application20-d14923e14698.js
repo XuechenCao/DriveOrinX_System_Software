@@ -1,0 +1,1 @@
+define({"topics":[{"title":"NvSciIpc init","href":"common\/topics\/nvsci\/NvSciIpcinit23.html","attributes":{"data-id":"NvSciIpcinit23"},"menu":{"hasChildren":false},"tocID":"NvSciIpcinit23-d14923e14706","topics":[]}]});

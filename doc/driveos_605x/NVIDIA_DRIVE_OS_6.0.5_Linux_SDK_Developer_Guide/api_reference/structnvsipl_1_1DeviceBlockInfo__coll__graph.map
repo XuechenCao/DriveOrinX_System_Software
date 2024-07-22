@@ -1,0 +1,10 @@
+<map id="nvsipl::DeviceBlockInfo" name="nvsipl::DeviceBlockInfo">
+<area shape="rect" id="node1" title="Defines the DeviceBlock information." alt="" coords="238,392,390,419"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1CameraModuleInfo.html" title="Defines information for the camera module." alt="" coords="143,303,315,329"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1SensorInfo.html" title="Defines the image sensor information." alt="" coords="11,213,137,240"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1SensorInfo_1_1VirtualChannelInfo.html" title="Defines the information of a virtual channel/single exposure." alt="" coords="5,109,143,151"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1SensorInfo_1_1Resolution.html" title="Defines the image resolution." alt="" coords="11,5,137,47"/>
+<area shape="rect" id="node6" href="$structnvsipl_1_1EEPROMInfo.html" title="Defines the EEPROM information." alt="" coords="161,213,296,240"/>
+<area shape="rect" id="node7" href="$structnvsipl_1_1SerInfo.html" title="Defines the serializer information." alt="" coords="321,213,427,240"/>
+<area shape="rect" id="node8" href="$structnvsipl_1_1DeserInfo.html" title="Defines the deserializer information." alt="" coords="339,303,457,329"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="NvMediaLdcIptParameters" name="NvMediaLdcIptParameters">
+<area shape="rect" id="node1" title="Holds inverse perspective transformation configuration." alt="" coords="17,95,188,121"/>
+<area shape="rect" id="node2" href="$structNvMediaLdcRegionParameters.html" title="Holds the NvMedia LDC region configuration." alt="" coords="5,5,200,32"/>
+</map>

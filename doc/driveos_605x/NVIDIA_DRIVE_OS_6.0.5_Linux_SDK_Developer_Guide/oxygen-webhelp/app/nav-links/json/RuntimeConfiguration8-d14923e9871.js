@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Conditions Requiring a Stream Surface","href":"common\/topics\/window_system_stub\/ConditionsRequiringaStreamSurface11.html","attributes":{"data-id":"ConditionsRequiringaStreamSurface11"},"menu":{"hasChildren":false},"tocID":"ConditionsRequiringaStreamSurface11-d14923e9879","topics":[]}]});

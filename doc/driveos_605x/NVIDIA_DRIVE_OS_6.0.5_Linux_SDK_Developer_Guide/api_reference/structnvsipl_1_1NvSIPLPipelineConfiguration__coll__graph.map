@@ -1,0 +1,14 @@
+<map id="nvsipl::NvSIPLPipelineConfiguration" name="nvsipl::NvSIPLPipelineConfiguration">
+<area shape="rect" id="node1" title="Defines the camera pipeline configuration." alt="" coords="1397,231,1620,258"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSIPLIspStatsOverrideSetting.html" title="SIPL ISP Statistics Override Parameters." alt="" coords="1024,149,1223,191"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStats.html" title="Holds controls for local average and clip statistics (LAC Stats)." alt="" coords="593,51,761,92"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="281,87,435,114"/>
+<area shape="rect" id="node10" href="$structnvsipl_1_1NvSiplISPHistogramStatsOverride.html" title="SIPL ISP Histogram Statistics Override Params." alt="" coords="589,187,765,228"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,87,160,114"/>
+<area shape="rect" id="node6" href="$structnvsipl_1_1NvSiplISPStatisticsWindows.html" title="Defines the windows used in ISP stats calculations." alt="" coords="273,5,443,47"/>
+<area shape="rect" id="node7" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="19,13,146,39"/>
+<area shape="rect" id="node8" href="$structnvsipl_1_1NvSiplISPBadPixelStats.html" title="Holds controls for bad pixel statistics (BP Stats)." alt="" coords="595,121,760,163"/>
+<area shape="rect" id="node9" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="296,194,420,221"/>
+<area shape="rect" id="node11" href="$structnvsipl_1_1NvSIPLDownscaleCropCfg.html" title="Downscale and crop configuration." alt="" coords="789,255,1000,282"/>
+<area shape="rect" id="node12" href="$classnvsipl_1_1NvSIPLImageGroupWriter.html" title="Describes the interfaces of SIPL pipeline feeder." alt="" coords="1037,293,1210,335"/>
+</map>

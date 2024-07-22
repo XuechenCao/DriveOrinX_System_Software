@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSiplISPLocalAvgClipStatsData" name="nvsipl::NvSiplISPLocalAvgClipStatsData">
+<area shape="rect" id="node1" title="Holds local average and clip statistics block (LAC Stats)." alt="" coords="5,109,173,151"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStatsROIData.html" title="Holds local average and clip statistics data for a region of interest." alt="" coords="5,5,173,47"/>
+</map>

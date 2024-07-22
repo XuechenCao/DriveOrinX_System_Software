@@ -1,0 +1,4 @@
+<map id="nvsipl::SiplControlAutoAwbSetting" name="nvsipl::SiplControlAutoAwbSetting">
+<area shape="rect" id="node1" title="Automatic white balance settings." alt="" coords="18,95,195,136"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1SiplControlAutoAwbGain.html" title="Color Gains assuming order RGGB, RCCB, RCCC." alt="" coords="5,5,208,32"/>
+</map>

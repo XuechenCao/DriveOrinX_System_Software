@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To configure the private LAN to the target","href":"common\/topics\/config_setup\/Host_TargetSetupandConfiguration1.html#ToconfiguretheprivateLANtothetarget23","attributes":{"data-id":"ToconfiguretheprivateLANtothetarget23"},"menu":{"hasChildren":false},"tocID":"ToconfiguretheprivateLANtothetarget23-d14923e4753","topics":[]}]});

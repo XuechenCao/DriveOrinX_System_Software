@@ -1,0 +1,17 @@
+<map id="nvsipl::SiplControlIspStatsInfo" name="nvsipl::SiplControlIspStatsInfo">
+<area shape="rect" id="node1" title="Structure containing ISP Stats information." alt="" coords="1200,169,1395,196"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStats.html" title="Holds controls for local average and clip statistics (LAC Stats)." alt="" coords="909,333,1077,374"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="269,179,424,205"/>
+<area shape="rect" id="node9" href="$structnvsipl_1_1NvSiplISPFlickerBandStats.html" title="Holds controls for flicker band statistics (FB Stats)." alt="" coords="597,263,751,305"/>
+<area shape="rect" id="node12" href="$structnvsipl_1_1NvSiplISPHistogramStats.html" title="Holds controls for histogram statistics (HIST Stats)." alt="" coords="905,7,1081,49"/>
+<area shape="rect" id="node13" href="$structnvsipl_1_1NvSiplISPRadialTF.html" title="Defines a radial transform." alt="" coords="590,56,758,83"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,179,160,205"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1NvSiplISPStatisticsWindows.html" title="Defines the windows used in ISP stats calculations." alt="" coords="589,398,759,439"/>
+<area shape="rect" id="node6" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="283,388,410,415"/>
+<area shape="rect" id="node7" href="$structnvsipl_1_1NvSiplISPFlickerBandStatsData.html" title="Holds flicker band statistics (FB Stats)." alt="" coords="916,73,1071,114"/>
+<area shape="rect" id="node8" href="$structnvsipl_1_1NvSiplISPHistogramStatsData.html" title="Holds histogram statistics (HIST Stats)." alt="" coords="905,138,1081,179"/>
+<area shape="rect" id="node10" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStatsData.html" title="Holds local average and clip statistics block (LAC Stats)." alt="" coords="909,203,1077,245"/>
+<area shape="rect" id="node11" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStatsROIData.html" title="Holds local average and clip statistics data for a region of interest." alt="" coords="590,198,758,239"/>
+<area shape="rect" id="node14" href="$structnvsipl_1_1NvSiplISPSplineControlPoint.html" title="Defines a spline control point." alt="" coords="249,39,444,81"/>
+<area shape="rect" id="node15" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="612,5,736,32"/>
+</map>

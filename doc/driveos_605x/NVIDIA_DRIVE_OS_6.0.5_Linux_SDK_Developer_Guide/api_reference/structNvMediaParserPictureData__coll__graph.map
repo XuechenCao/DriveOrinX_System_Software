@@ -1,0 +1,20 @@
+<map id="NvMediaParserPictureData" name="NvMediaParserPictureData">
+<area shape="rect" id="node1" title="Holds picture information for the current frame decode operation." alt="" coords="679,356,851,383"/>
+<area shape="rect" id="node2" href="$structNvMediaPictureInfoH264.html" title="Picture parameter information for an H.264 picture." alt="" coords="407,56,567,83"/>
+<area shape="rect" id="node3" href="$structNvMediaReferenceFrameH264.html" title="Information about an H.264 reference frame." alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node4" href="$structNvMediaSEIPayloadH264.html" title="H.264 SEI payload information Used by the parser only." alt="" coords="21,56,184,83"/>
+<area shape="rect" id="node5" href="$structNvMediaPictureInfoH265.html" title="Holds picture parameter information for an H.265 picture." alt="" coords="407,165,567,192"/>
+<area shape="rect" id="node6" href="$structNvMediaContentLightLevelInfo.html" title="Content Light Level info for an H.265 picture." alt="" coords="7,107,199,133"/>
+<area shape="rect" id="node7" href="$structNvMediaMasteringDisplayData.html" title="Mastering display data for an H.265 picture." alt="" coords="7,157,199,184"/>
+<area shape="rect" id="node8" href="$structNvMediaSliceDecodeData.html" title="slice level data used with slice level decoding" alt="" coords="20,224,185,251"/>
+<area shape="rect" id="node9" href="$structNvMediaPictureInfoMPEG4Part2.html" title="Holds picture parameter information for an MPEG&#45;4 Part 2 picture." alt="" coords="387,305,587,332"/>
+<area shape="rect" id="node10" href="$structNvMediaPictureInfoVC1.html" title="Holds picture parameter information for a VC1 picture." alt="" coords="409,356,564,383"/>
+<area shape="rect" id="node11" href="$structNvMediaPictureInfoVP8.html" title="Picture parameter information for a VP8 picture." alt="" coords="410,407,563,433"/>
+<area shape="rect" id="node12" href="$struct__NvMediaPictureInfo__AV1.html" title="Holds picture parameter information for AV1 picture." alt="" coords="403,457,571,484"/>
+<area shape="rect" id="node13" href="$struct__NvMediaPicEntry__AV1.html" title=" " alt="" coords="27,381,179,408"/>
+<area shape="rect" id="node14" href="$struct__NvMediaPicEntry__AV1__Short.html" title=" " alt="" coords="27,447,179,489"/>
+<area shape="rect" id="node15" href="$structNvMediaPictureInfoVP9.html" title="Holds picture parameter information for a VP9 picture." alt="" coords="410,512,563,539"/>
+<area shape="rect" id="node16" href="$structNvmediaVP9EntropyProbs.html" title="Holds VP9 entropy contexts." alt="" coords="19,513,187,540"/>
+<area shape="rect" id="node17" href="$structNvMediaVP9BackwardUpdates.html" title="Holds VP9 counters for adaptive entropy contexts." alt="" coords="6,564,199,591"/>
+<area shape="rect" id="node18" href="$structNvMediaPictureInfoMPEG1Or2.html" title="Holds picture parameter information for an MPEG 1 or MPEG 2 picture." alt="" coords="391,563,582,589"/>
+</map>

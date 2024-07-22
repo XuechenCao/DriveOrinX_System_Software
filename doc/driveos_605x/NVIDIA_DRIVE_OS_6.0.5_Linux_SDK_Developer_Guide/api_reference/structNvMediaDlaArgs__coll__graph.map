@@ -1,0 +1,5 @@
+<map id="NvMediaDlaArgs" name="NvMediaDlaArgs">
+<area shape="rect" id="node1" title="Holds input and output DLA data." alt="" coords="25,184,140,211"/>
+<area shape="rect" id="node2" href="$structNvMediaDlaData.html" title="Specifies the data type and data pointer." alt="" coords="25,95,140,121"/>
+<area shape="rect" id="node3" href="$structNvMediaDlaDataPointer.html" title="Holds pointers to the DLA data." alt="" coords="5,5,160,32"/>
+</map>

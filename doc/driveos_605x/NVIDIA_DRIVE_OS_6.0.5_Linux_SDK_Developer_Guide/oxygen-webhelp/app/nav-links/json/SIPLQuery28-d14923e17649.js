@@ -1,0 +1,1 @@
+define({"topics":[{"title":"SIPL Query Drivers","href":"common\/topics\/nvmedia_concept_nvsipl\/SIPLQueryDrivers31.html","attributes":{"data-id":"SIPLQueryDrivers31"},"menu":{"hasChildren":false},"tocID":"SIPLQueryDrivers31-d14923e17657","topics":[]}]});

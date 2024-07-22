@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Display Hardware Compositing in Weston","href":"common\/topics\/window_system_stub\/DisplayHardwareCompositinginWeston108.html","attributes":{"data-id":"DisplayHardwareCompositinginWeston108"},"menu":{"hasChildren":false},"tocID":"DisplayHardwareCompositinginWeston108-d14923e9783","topics":[]}]});

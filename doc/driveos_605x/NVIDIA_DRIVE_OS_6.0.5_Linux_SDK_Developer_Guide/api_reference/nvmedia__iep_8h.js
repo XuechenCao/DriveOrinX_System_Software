@@ -1,0 +1,36 @@
+var nvmedia__iep_8h =
+[
+    [ "NVMEDIA_IEP_MAX_PRENVSCISYNCFENCES", "group__x__image__encode__api.html#gab670d1b13f70cf4a4a7b5083e6e2884e", null ],
+    [ "NVMEDIA_IEP_VERSION_MAJOR", "group__x__image__encode__api.html#ga4157334e607762dc166d42095e777460", null ],
+    [ "NVMEDIA_IEP_VERSION_MINOR", "group__x__image__encode__api.html#ga716221600b30ed9a6a85659ee15be0a3", null ],
+    [ "NVMEDIA_IEP_VERSION_PATCH", "group__x__image__encode__api.html#ga0cb1cc5be7d6069ea4c21496ce8c34a5", null ],
+    [ "NvMediaIEP", "group__x__image__encode__api.html#gac56627285475251920e16e8fffa704f1", null ],
+    [ "NvMediaIEPType", "group__x__image__encode__api.html#gad33827d7c6a9865f1f48c73eb0dd0ce1", [
+      [ "NVMEDIA_IMAGE_ENCODE_H264", "group__x__image__encode__api.html#ggad33827d7c6a9865f1f48c73eb0dd0ce1a8064ed04be6498f477b744daa536eed9", null ],
+      [ "NVMEDIA_IMAGE_ENCODE_HEVC", "group__x__image__encode__api.html#ggad33827d7c6a9865f1f48c73eb0dd0ce1a0d605cbec497bcb31564ee6e8191a865", null ],
+      [ "NVMEDIA_IMAGE_ENCODE_VP9", "group__x__image__encode__api.html#ggad33827d7c6a9865f1f48c73eb0dd0ce1a35b672443bb7fdabbff94b53d4fd494b", null ],
+      [ "NVMEDIA_IMAGE_ENCODE_AV1", "group__x__image__encode__api.html#ggad33827d7c6a9865f1f48c73eb0dd0ce1a8197d139d01cf3e67e9a9becfa371127", null ],
+      [ "NVMEDIA_IMAGE_ENCODE_END", "group__x__image__encode__api.html#ggad33827d7c6a9865f1f48c73eb0dd0ce1a083e15f478c64f1b85cf16f893af201e", null ]
+    ] ],
+    [ "NvMediaIEPBitsAvailable", "group__x__image__encode__api.html#ga78850cc1e678830c76dde74ae28cd3c9", null ],
+    [ "NvMediaIEPCreate", "group__x__image__encode__api.html#ga2ce4a2837278106b8d42b9fee6055593", null ],
+    [ "NvMediaIEPCreateCtx", "group__x__image__encode__api.html#gab966a91f96e30e856b7081177e33c45d", null ],
+    [ "NvMediaIEPDestroy", "group__x__image__encode__api.html#ga49193a0dd0f123771ce5fc20411292de", null ],
+    [ "NvMediaIEPFeedFrame", "group__x__image__encode__api.html#gaaa48b7f49bc3ca5027105deb87bc8e9d", null ],
+    [ "NvMediaIEPFillNvSciBufAttrList", "group__x__image__encode__api.html#ga9f9845844eabc59ab9354e34f863ecd2", null ],
+    [ "NvMediaIEPFillNvSciSyncAttrList", "group__x__image__encode__api.html#ga1185b465307f5099193068bb33b6b356", null ],
+    [ "NvMediaIEPGetAttribute", "group__x__image__encode__api.html#gacf6cc05cc42b168f1c817d41fad9f49b", null ],
+    [ "NvMediaIEPGetBits", "group__x__image__encode__api.html#gae0de852c8a1f86883e04783e1e63b0fe", null ],
+    [ "NvMediaIEPGetEOFNvSciSyncFence", "group__x__image__encode__api.html#ga30c37470b3b98fbdef8d56bee7d10b25", null ],
+    [ "NvMediaIEPGetSOFNvSciSyncFence", "group__x__image__encode__api.html#ga0fe183c4f52252fc749301788c0320d9", null ],
+    [ "NvMediaIEPGetVersion", "group__x__image__encode__api.html#gaf2ce9d3690f9cec252c1c90ca4e8340a", null ],
+    [ "NvMediaIEPInit", "group__x__image__encode__api.html#ga14b79403f7e965b263e35b3f7454e4d3", null ],
+    [ "NvMediaIEPInsertPreNvSciSyncFence", "group__x__image__encode__api.html#gacabdbdb21bc71c1d25a37795678f3b70", null ],
+    [ "NvMediaIEPRegisterNvSciBufObj", "group__x__image__encode__api.html#ga6f0eaa8d4041350ec3cb7317d733f79e", null ],
+    [ "NvMediaIEPRegisterNvSciSyncObj", "group__x__image__encode__api.html#ga522cfd8ca3a6746d6e9ae5ed49abf129", null ],
+    [ "NvMediaIEPSetConfiguration", "group__x__image__encode__api.html#ga4667f0f2e1b303e0c0716beb8c2c84ae", null ],
+    [ "NvMediaIEPSetNvSciSyncObjforEOF", "group__x__image__encode__api.html#ga3bf34c48f52a29341d4e7998721bfeca", null ],
+    [ "NvMediaIEPSetNvSciSyncObjforSOF", "group__x__image__encode__api.html#ga36103b0022c779e6c4e2b25b0d4523c4", null ],
+    [ "NvMediaIEPUnregisterNvSciBufObj", "group__x__image__encode__api.html#ga26f38438460fe48d41afb034b7512b63", null ],
+    [ "NvMediaIEPUnregisterNvSciSyncObj", "group__x__image__encode__api.html#ga3528499d9f49158800d94bd99bb73a0e", null ]
+];

@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSIPLDownscaleCropCfg" name="nvsipl::NvSIPLDownscaleCropCfg">
+<area shape="rect" id="node1" title="Downscale and crop configuration." alt="" coords="5,139,216,165"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="49,5,173,32"/>
+</map>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To add a mode to the mode list","href":"common\/topics\/window_system_stub\/Toaddamodetothemodelist83.html","attributes":{"data-id":"Toaddamodetothemodelist83"},"menu":{"hasChildren":false},"tocID":"Toaddamodetothemodelist83-d14923e10151","topics":[]}]});

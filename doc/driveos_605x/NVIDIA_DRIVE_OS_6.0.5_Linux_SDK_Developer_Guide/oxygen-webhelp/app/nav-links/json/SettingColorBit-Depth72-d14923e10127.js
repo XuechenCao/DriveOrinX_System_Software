@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To start X11 with a particular color bit-depth","href":"common\/topics\/window_system_stub\/TostartX11withaparticularcolorbit-depth75.html","attributes":{"data-id":"TostartX11withaparticularcolorbit-depth75"},"menu":{"hasChildren":false},"tocID":"TostartX11withaparticularcolorbit-depth75-d14923e10135","topics":[]}]});

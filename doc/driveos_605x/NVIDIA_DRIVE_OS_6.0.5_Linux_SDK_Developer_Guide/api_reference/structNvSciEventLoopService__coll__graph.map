@@ -1,0 +1,4 @@
+<map id="NvSciEventLoopService" name="NvSciEventLoopService">
+<area shape="rect" id="node1" title="An abstract interface that event consumer can wait for events using event notifier in event loop." alt="" coords="5,95,159,121"/>
+<area shape="rect" id="node2" href="$structNvSciEventService.html" title="An abstract interface for a program&#39;s event handling infrastructure." alt="" coords="19,5,145,32"/>
+</map>

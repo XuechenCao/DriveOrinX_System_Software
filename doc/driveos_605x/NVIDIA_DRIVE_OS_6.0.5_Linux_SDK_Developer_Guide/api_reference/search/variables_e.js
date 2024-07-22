@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['ofamode_5556',['ofaMode',['../structNvMediaIofaInitParams.html#a367c1147d3268b9ad7d39fc8aa3aac48',1,'NvMediaIofaInitParams']]],
+  ['ofapriv_5557',['ofaPriv',['../structNvMediaIofa.html#af0b21c611d34a15cc0638d62e6c03224',1,'NvMediaIofa']]],
+  ['ofapydlevel_5558',['ofaPydLevel',['../structNvMediaIofaInitParams.html#a695ae64b0b2e94bbf0c1ae9d8de99c7b',1,'NvMediaIofaInitParams']]],
+  ['offset_5559',['offset',['../structosi__core__frp__cmd.html#a8e02a8194bec78a80dc59c063ab134d3',1,'osi_core_frp_cmd::offset()'],['../structnvsipl_1_1NvSiplISPHistogramStats.html#ab0dcf3d17628643926f58b3e8212db0b',1,'nvsipl::NvSiplISPHistogramStats::offset()'],['../structnvsipl_1_1NvSiplISPHistogramStatsOverride.html#ad9bbdf4fc2c82edf573a929c1804c1f8',1,'nvsipl::NvSiplISPHistogramStatsOverride::offset()']]],
+  ['offsettodctparts_5560',['offsetToDctParts',['../structNvMediaPictureInfoVP9.html#af900a2197d58b4d65254c420db3cdc3a',1,'NvMediaPictureInfoVP9']]],
+  ['oper_5fmode_5561',['oper_mode',['../structosi__core__avb__algorithm.html#a4a1fdf3f8d9e748df786783f7330ecf4',1,'osi_core_avb_algorithm']]],
+  ['operationid_5562',['operationId',['../structNvMedia2DComposeResult.html#a1d3dbfef341b01358ad3d4918f84c8c5',1,'NvMedia2DComposeResult::operationId()'],['../structNvMediaLdcResult.html#a43bd9ab5a522b44212dbd66355cc511b',1,'NvMediaLdcResult::operationId()']]],
+  ['order_5fhint_5563',['order_hint',['../struct__NvMediaPictureInfo__AV1.html#ab110df2996cfa98956ace8bc3921c22e',1,'_NvMediaPictureInfo_AV1']]],
+  ['order_5fhint_5fbits_5fminus_5f1_5564',['order_hint_bits_minus_1',['../struct__NvMediaPictureInfo__AV1.html#adabd32be917a0cccb530f2b7ff1c0b64',1,'_NvMediaPictureInfo_AV1']]],
+  ['outheight_5565',['outHeight',['../structNvMediaIofaInitParams.html#af83f1c89b1a782c6f18cc5bba3409a4d',1,'NvMediaIofaInitParams']]],
+  ['output_5fflag_5fpresent_5fflag_5566',['output_flag_present_flag',['../structNvMediaPictureInfoH265.html#a7a92213839b89846ec5b8aec8068ff4b',1,'NvMediaPictureInfoH265']]],
+  ['outsurface_5567',['outSurface',['../structNvMediaIofaBufArray.html#a234c52be8121d4fd70a57bcf35b6d1af',1,'NvMediaIofaBufArray']]],
+  ['outwidth_5568',['outWidth',['../structNvMediaIofaInitParams.html#ad53b20d378b5fbc41c5c800d7393f1d7',1,'NvMediaIofaInitParams']]],
+  ['overlap_5569',['overlap',['../structNvMediaPictureInfoVC1.html#a2cebb0519a156cf22b10d7c402aca0fd',1,'NvMediaPictureInfoVC1']]],
+  ['overlap_5fflag_5570',['overlap_flag',['../struct__NvMediaPictureInfo__AV1.html#adf17ce2c9e52e44fedbf29877b039c49',1,'_NvMediaPictureInfo_AV1']]],
+  ['overscanappropriateflag_5571',['overscanAppropriateFlag',['../group__x__h264__encoder__api.html#gab74a7e9522c1aae1a7589c7c3d084f22',1,'NvMediaEncodeConfigH264VUIParams::overscanAppropriateFlag()'],['../group__x__h264__encoder__api.html#gaefec8fea1e2df5fef898ae7a70fc960a',1,'NvMediaEncodeConfigH265VUIParams::overscanAppropriateFlag()']]],
+  ['overscaninfopresentflag_5572',['overscanInfoPresentFlag',['../group__x__h264__encoder__api.html#ga0f172aaf8c145d78709f4ec5957e3433',1,'NvMediaEncodeConfigH264VUIParams::overscanInfoPresentFlag()'],['../group__x__h264__encoder__api.html#gad11c0614e2738e24407ddedb60193781',1,'NvMediaEncodeConfigH265VUIParams::overscanInfoPresentFlag()']]]
+];

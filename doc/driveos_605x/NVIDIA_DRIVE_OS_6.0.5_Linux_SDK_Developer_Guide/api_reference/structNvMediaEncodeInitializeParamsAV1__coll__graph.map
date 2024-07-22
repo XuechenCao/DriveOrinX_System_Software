@@ -1,0 +1,4 @@
+<map id="NvMediaEncodeInitializeParamsAV1" name="NvMediaEncodeInitializeParamsAV1">
+<area shape="rect" id="node1" title="Holds AV1&#45;specific encode initialization parameters." alt="" coords="5,109,229,136"/>
+<area shape="rect" id="node2" href="$structNvMediaEncodeExternalMeHintCountsPerBlocktype.html" title="Holds an external motion vector hint with counts per block type." alt="" coords="19,5,215,47"/>
+</map>

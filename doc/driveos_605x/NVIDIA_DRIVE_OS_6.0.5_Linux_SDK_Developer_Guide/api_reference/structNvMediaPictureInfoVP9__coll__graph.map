@@ -1,0 +1,5 @@
+<map id="NvMediaPictureInfoVP9" name="NvMediaPictureInfoVP9">
+<area shape="rect" id="node1" title="Holds picture parameter information for a VP9 picture." alt="" coords="115,95,269,121"/>
+<area shape="rect" id="node2" href="$structNvmediaVP9EntropyProbs.html" title="Holds VP9 entropy contexts." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node3" href="$structNvMediaVP9BackwardUpdates.html" title="Holds VP9 counters for adaptive entropy contexts." alt="" coords="198,5,391,32"/>
+</map>

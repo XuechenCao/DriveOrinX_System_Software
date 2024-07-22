@@ -1,0 +1,1524 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" data-whc_version="24.1">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The NvDisplay driver uses the following device tree nodes and properties. Properties customizable are marked accordingly for each property used. Nodes used in NvDisplay drivers for QNX are as follows. ..."/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="concept"/><meta name="DC.relation" content="../../../common/topics/util_setup/device_tree_header.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="concept_xrx_mmh_qvb"/><title>Display Device Tree | NVIDIA Docs</title><!--  Generated with Oxygen version 24.1, build number 2022041502.  --><meta name="wh-path2root" content="../../../"/><meta name="wh-toc-id" content="concept_xrx_mmh_qvb-d14923e31814"/><meta name="wh-source-relpath" content="common/topics/util_setup/display_device_tree.dita"/><meta name="wh-out-relpath" content="common/topics/util_setup/display_device_tree.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/app/topic-page.css?buildId=2022041502"/>
+    
+    
+    <script src="../../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../../oxygen-webhelp/app/topic-page.js" src="../../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/nvidia.webhelp.css?buildId=2022041502"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/nv-drive-styles.css?buildId=2022041502"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/fonts.css?buildId=2022041502"/>
+    <meta name="description" content="Learn how to develop for NVIDIA DRIVE, a scalable computing platform that enables automakers and Tier-1 suppliers to accelerate production of autonomous vehicles."/>
+    <meta name="keywords" content="NVIDIA DRIVE OS,NVIDIA DRIVE SDK,NVIDIA DRIVE ORIN,Autonomous Vehicles,SDK Manager,NVIDIA DRIVE AGX,System Installation,CUDA,TensorRT"/>
+    <link href="https://docs.nvidia.com/images/nvidia.ico" rel="icon"/>
+    <link href="https://docs.nvidia.com/images/nvidia.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+" crossorigin="anonymous"/>
+    <script src="https://assets.adobedtm.com/5d4962a43b79/c1061d2c5e7b/launch-191c2462b890.min.js"></script>
+</head>
+
+    <body id="concept_xrx_mmh_qvb" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        
+   <header class="wh_header" id="main-header" title="NVIDIA DRIVE OS Developer Guide">
+      <div class="navigation">
+         <nav class="global-nav" id="nv-dos-doc-global-nav">
+            <div class="nav-header desktop-nav">
+               <div class="nav-header-container">
+                  <!-- SOLR Search -->
+                  <div class="dlp-search-popup">
+                     <a id="nvidia-search-box-link" title="Search docs.nvidia.com" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="brand-container">
+                     <a class="brand-link nvidia-logo" href="https://www.nvidia.com/en-us/" title="Artificial Intelligence Computing Leadership from NVIDIA" aria-labelledby="nvidia_logo_desktop">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 974.7 179.7" version="1.1" viewBox="0 0 974.7 179.7" xml:space="preserve" width="110" height="44">
+                           <title></title>
+                           <path d="m962.1 144.1v-2.7h1.7c0.9 0 2.2 0.1 2.2 1.2s-0.7 1.5-1.8 1.5h-2.1m0 1.9h1.2l2.7 4.7h2.9l-3-4.9c1.5 0.1 2.7-1 2.8-2.5v-0.4c0-2.6-1.8-3.4-4.8-3.4h-4.3v11.2h2.5v-4.7m12.6-0.9c0-6.6-5.1-10.4-10.8-10.4s-10.8 3.8-10.8 10.4 5.1 10.4 10.8 10.4 10.8-3.8 10.8-10.4m-3.2 0c0.2 4.2-3.1 7.8-7.3 8h-0.3c-4.4 0.2-8.1-3.3-8.3-7.7s3.3-8.1 7.7-8.3 8.1 3.3 8.3 7.7c-0.1 0.1-0.1 0.2-0.1 0.3z"></path>
+                           <path d="m578.2 34v118h33.3v-118h-33.3zm-262-0.2v118.1h33.6v-91.7l26.2 0.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6v-65.2c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7 0.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6-12.2-16.5-30-19.7-56.6-19.7h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3v-67.1zm-134.7-25.6l-27.8 93.5-26.6-93.5h-36l38 118h48l38.4-118h-34zm231.4 118h33.3v-118h-33.3v118zm93.4-118l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7l-46.9-117.8h-44.5zm21.6 21.5l20.2 55.2h-41l20.8-55.2z"></path>
+                           <path fill="#76B900" d="m101.3 53.6v-16.2c1.6-0.1 3.2-0.2 4.8-0.2 44.4-1.4 73.5 38.2 73.5 38.2s-31.4 43.6-65.1 43.6c-4.5 0-8.9-0.7-13.1-2.1v-49.2c17.3 2.1 20.8 9.7 31.1 27l23.1-19.4s-16.9-22.1-45.3-22.1c-3-0.1-6 0.1-9 0.4m0-53.6v24.2l4.8-0.3c61.7-2.1 102 50.6 102 50.6s-46.2 56.2-94.3 56.2c-4.2 0-8.3-0.4-12.4-1.1v15c3.4 0.4 6.9 0.7 10.3 0.7 44.8 0 77.2-22.9 108.6-49.9 5.2 4.2 26.5 14.3 30.9 18.7-29.8 25-99.3 45.1-138.7 45.1-3.8 0-7.4-0.2-11-0.6v21.1h170.2v-179.7h-170.4zm0 116.9v12.8c-41.4-7.4-52.9-50.5-52.9-50.5s19.9-22 52.9-25.6v14h-0.1c-17.3-2.1-30.9 14.1-30.9 14.1s7.7 27.3 31 35.2m-73.5-39.5s24.5-36.2 73.6-40v-13.2c-54.4 4.4-101.4 50.4-101.4 50.4s26.6 77 101.3 84v-14c-54.8-6.8-73.5-67.2-73.5-67.2z"></path>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <!-- Mega menu code start -->
+               <!-- Mega menu code ends -->
+               <div class="nav-tools-container" style="display:none;">
+                  <div class="searchoverlay"></div>
+                  <ul class="nav-header-list" role="list" aria-label="Menu Tools">
+                  </ul>
+               </div>
+            </div>
+            <!-- Mobile navigation starts -->  
+            <div class="mobile-nav">
+               <div class="nav-header">
+                  <div class="nav-header-container">
+                     <div class="nav-tools-container">
+                        <ul class="nav-header-list" role="list">
+                           <li class="nav-header-item brand-container">
+                              <a class="brand-link pull-left nvidia-logo toplevel" href="https://www.nvidia.com/en-us/" title="Artificial Intelligence Computing Leadership from NVIDIA" alt="Artificial Intelligence Computing Leadership from NVIDIA" aria-labelledby="nvidia_logo_desktop">
+                                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 974.7 179.7" version="1.1" viewBox="0 0 974.7 179.7" xml:space="preserve" width="110" height="44">
+                                 <title></title>
+                                 <path d="m962.1 144.1v-2.7h1.7c0.9 0 2.2 0.1 2.2 1.2s-0.7 1.5-1.8 1.5h-2.1m0 1.9h1.2l2.7 4.7h2.9l-3-4.9c1.5 0.1 2.7-1 2.8-2.5v-0.4c0-2.6-1.8-3.4-4.8-3.4h-4.3v11.2h2.5v-4.7m12.6-0.9c0-6.6-5.1-10.4-10.8-10.4s-10.8 3.8-10.8 10.4 5.1 10.4 10.8 10.4 10.8-3.8 10.8-10.4m-3.2 0c0.2 4.2-3.1 7.8-7.3 8h-0.3c-4.4 0.2-8.1-3.3-8.3-7.7s3.3-8.1 7.7-8.3 8.1 3.3 8.3 7.7c-0.1 0.1-0.1 0.2-0.1 0.3z"></path>
+                                 <path d="m578.2 34v118h33.3v-118h-33.3zm-262-0.2v118.1h33.6v-91.7l26.2 0.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6v-65.2c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7 0.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6-12.2-16.5-30-19.7-56.6-19.7h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3v-67.1zm-134.7-25.6l-27.8 93.5-26.6-93.5h-36l38 118h48l38.4-118h-34zm231.4 118h33.3v-118h-33.3v118zm93.4-118l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7l-46.9-117.8h-44.5zm21.6 21.5l20.2 55.2h-41l20.8-55.2z"></path>
+                                 <path fill="#76B900" d="m101.3 53.6v-16.2c1.6-0.1 3.2-0.2 4.8-0.2 44.4-1.4 73.5 38.2 73.5 38.2s-31.4 43.6-65.1 43.6c-4.5 0-8.9-0.7-13.1-2.1v-49.2c17.3 2.1 20.8 9.7 31.1 27l23.1-19.4s-16.9-22.1-45.3-22.1c-3-0.1-6 0.1-9 0.4m0-53.6v24.2l4.8-0.3c61.7-2.1 102 50.6 102 50.6s-46.2 56.2-94.3 56.2c-4.2 0-8.3-0.4-12.4-1.1v15c3.4 0.4 6.9 0.7 10.3 0.7 44.8 0 77.2-22.9 108.6-49.9 5.2 4.2 26.5 14.3 30.9 18.7-29.8 25-99.3 45.1-138.7 45.1-3.8 0-7.4-0.2-11-0.6v21.1h170.2v-179.7h-170.4zm0 116.9v12.8c-41.4-7.4-52.9-50.5-52.9-50.5s19.9-22 52.9-25.6v14h-0.1c-17.3-2.1-30.9 14.1-30.9 14.1s7.7 27.3 31 35.2m-73.5-39.5s24.5-36.2 73.6-40v-13.2c-54.4 4.4-101.4 50.4-101.4 50.4s26.6 77 101.3 84v-14c-54.8-6.8-73.5-67.2-73.5-67.2z"></path>
+                                 </svg>     
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Mobile navigation ends -->       
+            <!-- Common sub nav and brand nav Starts -->
+            <div class="hide sub-brand-nav">
+               <div class="sub-brand-nav-container">
+                  <div class="brand-nav-left fade  in" style="width: 100%;">
+                     <div id="sub-brand">
+                        <a class="sub-brand-name " title="DRIVE OS Developer Home" href="https://developer.nvidia.com/drive/"> 
+                        <span class="sub-brand-label size-small">DRIVE OS for DRIVE AGX</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Common sub nav and brand nav ends -->
+            <!-- Dark grey bar starts -->
+            <div class="breadcrumb breadCrumbNav">
+               <div class="subnav " data-auto-scrolling="no">
+                  <div class="subnav-container">
+                     <!-- Start DOS book title -->
+                     <div class="subnav-left pull-left m-wid-60">
+                        <div class="subnav-category">
+                           <div class=" wh_publication_title "><a href="../../../index.html"><span class="booktitle">  <span class="ph mainbooktitle">  <span class="keyword">NVIDIA DRIVE OS 6.0 Linux SDK Developer Guide</span>  </span>  <span class="ph booktitlealt">  <span class="keyword"></span>  </span>  </span></a></div>
+                        </div>
+                        
+                        
+                     </div>
+                     <!-- End DOS book title -->
+                     <!-- Start placeholder for DOS quick links -->
+                     <!--div class="subnav-right pull-right">
+                        <ul class="breadcrumb-list"></ul>
+                        </div-->
+                     <!-- End placeholder for DOS quick links -->
+                  </div>
+               </div>
+            </div>
+            <!-- Dark grey bar ends -->
+         </nav>
+      </div>
+   </header>
+
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../../index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="concept_ctf_ff3_qvb"><div class="title"><a href="../../../common/topics/util_setup/device_tree_header.html">Device Tree</a></div></div></li><li class="active"><div class="topicref" data-id="concept_xrx_mmh_qvb"><div class="title"><a href="../../../common/topics/util_setup/display_device_tree.html">Display Device Tree</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GettingStarted1-d14923e3244" class="topicref" data-id="GettingStarted1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GettingStarted1-d14923e3244-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/intro_sdk/GettingStarted1.html" id="GettingStarted1-d14923e3244-link">Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_pkj_hzg_hvb-d14923e3460" class="topicref" data-id="concept_pkj_hzg_hvb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_pkj_hzg_hvb-d14923e3460-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/installation/installation_stub.html" id="concept_pkj_hzg_hvb-d14923e3460-link">Installation</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_ewg_3yp_3rb-d14923e3786" class="topicref" data-id="concept_ewg_3yp_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_ewg_3yp_3rb-d14923e3786-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/board/Setup_and_Configurations.html" id="concept_ewg_3yp_3rb-d14923e3786-link">Setup and Configuration</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_nyv_4zp_3rb-d14923e5574" class="topicref" data-id="concept_nyv_4zp_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_nyv_4zp_3rb-d14923e5574-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/flashing_setup/Flashing_Header.html" id="concept_nyv_4zp_3rb-d14923e5574-link">Flashing</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_rqw_f1q_3rb-d14923e6700" class="topicref" data-id="concept_rqw_f1q_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_rqw_f1q_3rb-d14923e6700-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/virtual_setup_pdk/Embedded_Software_Components_Header.html" id="concept_rqw_f1q_3rb-d14923e6700-link">Embedded Software Components</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="SystemSoftwareComponentsandInterfaces1-d14923e23990" class="topicref" data-id="SystemSoftwareComponentsandInterfaces1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action SystemSoftwareComponentsandInterfaces1-d14923e23990-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/sys_components/SystemSoftwareComponentsandInterfaces1.html" id="SystemSoftwareComponentsandInterfaces1-d14923e23990-link">System Software Components and Interfaces</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="UnderstandingSecurity1-d14923e26049" class="topicref" data-id="UnderstandingSecurity1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action UnderstandingSecurity1-d14923e26049-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/UnderstandingSecurity1.html" id="UnderstandingSecurity1-d14923e26049-link">Understanding Security</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="SystemProgramming1-d14923e26866" class="topicref" data-id="SystemProgramming1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action SystemProgramming1-d14923e26866-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/sys_programming/SystemProgramming1.html" id="SystemProgramming1-d14923e26866-link">System Programming</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="BootloaderProgramming1-d14923e28325" class="topicref" data-id="BootloaderProgramming1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action BootloaderProgramming1-d14923e28325-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/bootloader_setup/BootloaderProgramming1.html" id="BootloaderProgramming1-d14923e28325-link">Bootloader Programming</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="MassStoragePartitionConfiguration1-d14923e29163" class="topicref" data-id="MassStoragePartitionConfiguration1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action MassStoragePartitionConfiguration1-d14923e29163-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/partition_setup/MassStoragePartitionConfiguration1.html" id="MassStoragePartitionConfiguration1-d14923e29163-link">Mass Storage Partition Configuration</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Utilities1-d14923e31187" class="topicref" data-id="Utilities1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Utilities1-d14923e31187-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/Utilities1.html" id="Utilities1-d14923e31187-link">NVIDIA DRIVE Utilities</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Manifest1-d14923e31771" class="topicref" data-id="Manifest1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Manifest1-d14923e31771-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/manifest_overview/Manifest1.html" id="Manifest1-d14923e31771-link">Manifest</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="concept_ctf_ff3_qvb-d14923e31806" class="topicref" data-id="concept_ctf_ff3_qvb" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action concept_ctf_ff3_qvb-d14923e31806-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/device_tree_header.html" id="concept_ctf_ff3_qvb-d14923e31806-link">Device Tree</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" class="active"><div data-tocid="concept_xrx_mmh_qvb-d14923e31814" class="topicref" data-id="concept_xrx_mmh_qvb" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/display_device_tree.html" id="concept_xrx_mmh_qvb-d14923e31814-link">Display Device Tree</a></div></div></li><li role="treeitem"><div data-tocid="concept_pvr_1rh_qvb-d14923e31822" class="topicref" data-id="concept_pvr_1rh_qvb" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/nvgpu_device_tree.html" id="concept_pvr_1rh_qvb-d14923e31822-link">NvGPU Device Tree</a></div></div></li><li role="treeitem"><div data-tocid="concept_dky_pth_qvb-d14923e31830" class="topicref" data-id="concept_dky_pth_qvb" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/pcie_device_tree.html" id="concept_dky_pth_qvb-d14923e31830-link">PCIe Controller Device Tree</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_ytz_dg3_qvb-d14923e31838" class="topicref" data-id="concept_ytz_dg3_qvb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_ytz_dg3_qvb-d14923e31838-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/resource_block_configuration.html" id="concept_ytz_dg3_qvb-d14923e31838-link">Camera Device Tree</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_gjp_hnb_rvb-d14923e31870" class="topicref" data-id="concept_gjp_hnb_rvb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_gjp_hnb_rvb-d14923e31870-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/nvhost_device_tree.html" id="concept_gjp_hnb_rvb-d14923e31870-link">NvHost Device Tree</a></div></div></li><li role="treeitem"><div data-tocid="concept_edt_cj3_qvb-d14923e31910" class="topicref" data-id="concept_edt_cj3_qvb" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/dla_device_tree.html" id="concept_edt_cj3_qvb-d14923e31910-link">DLA Device Tree</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="tocId-d14923e31919" class="topicref" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../api_reference/index.html" id="tocId-d14923e31919-link">API Reference</a></div></div></li><li role="treeitem"><div data-tocid="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1-d14923e31969" class="topicref" data-id="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/drive_os_third_party_licenses/NVIDIADRIVEOSThird-PartySoftwareLicen1.html" id="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1-d14923e31969-link">NVIDIA DRIVE OS <span class="ph">6.0</span> Third-Party Software Licenses</a></div></div></li><li role="treeitem"><div data-tocid="LegalInformation1-d14923e31989" class="topicref" data-id="LegalInformation1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/legal/LegalInformation1.html" id="LegalInformation1-d14923e31989-link">Legal Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="- topic/title title topictitle1" id="ariaid-title1">Display Device Tree</h1>
+    <div class="- topic/body concept/conbody body conbody">
+        <p class="- topic/p p">The NvDisplay driver uses the following device tree nodes and properties. Properties
+            customizable are marked accordingly for each property used. Nodes used in NvDisplay
+            drivers for QNX are as follows.</p>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_kbx_4mh_qvb" data-ofbid="concept_xrx_mmh_qvb__section_kbx_4mh_qvb"><h2 class="- topic/title title sectiontitle">NvDisplay</h2>
+            
+            <p class="- topic/p p">nvdisplay node, contains configuration parameters for initializing the NvDisplay
+                driver.</p>
+            <div class="- topic/p p">
+                <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_y4d_qmh_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_y4d_qmh_qvb"><code>nvdisplay: display@13800000 {
+compatible = "nvidia,tegra234-display";
+power-domains = &lt;&amp;bpmp TEGRA234_POWER_DOMAIN_DISP&gt;; nvidia,num-dpaux-instance = &lt;1&gt;;
+reg-names = "nvdisplay", "dpaux0", "hdacodec", "mipical"; reg = &lt;0x0 0x13800000 0x0 0xEFFFF /* nvdisplay */
+0x0 0x155C0000 0x0 0xFFFF /* dpaux0 */ 0x0 0x0242c000 0x0 0x1000 /* hdacodec */ 0x0 0x03990000 0x0 0x10000&gt;; /* mipical */
+interrupt-names = "nvdisplay", "dpaux0", "hdacodec"; interrupts = &lt;0 416 4
+0 419 4
+0 61 4&gt;;
+nvidia,bpmp = &lt;&amp;bpmp&gt;;
+clocks = &lt;&amp;bpmp_clks TEGRA234_CLK_HUB&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DISP&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DPAUX&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_FUSE&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_VCO&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_CLKOUTPN&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_CLKOUTA&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_VCO&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTPN&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTA&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTB&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV10&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV25&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV27PN&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_VCO&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_CLKOUTPN&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_DIV27PN&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL0_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P0_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_RG0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_RG1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DISPPLL&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DISPHUBPLL&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_LP&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_CORE&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_PIXEL&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DP_LINK_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_INPUT&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_AFIFO&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_AFIFO_M&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_RG0_M&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_RG1_M&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_M&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_M&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PLLHUB&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_PAD_INPUT&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SF0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SF0&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SF1&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_PAD_INPUT&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR0_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR1_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_PLL_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_PLL_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_REF&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_OSC&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_DSC&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_MAUD&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_AZA_2XBIT&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_AZA_BIT&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_MIPI_CAL&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_UART_FST_MIPI_CAL&gt;,
+&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_DIV&gt;; clock-names = "nvdisplayhub_clk",
+"nvdisplay_disp_clk", "nvdisplay_p0_clk", "nvdisplay_p1_clk", "dpaux0_clk", "fuse_clk", "dsipll_vco_clk", "dsipll_clkoutpn_clk", "dsipll_clkouta_clk", "sppll0_vco_clk", "sppll0_clkoutpn_clk", "sppll0_clkouta_clk", "sppll0_clkoutb_clk", "sppll0_div10_clk", "sppll0_div25_clk", "sppll0_div27_clk",
+"sppll1_vco_clk", "sppll1_clkoutpn_clk", "sppll1_div27_clk", "vpll0_ref_clk", "vpll0_clk", "vpll1_clk",
+"nvdisplay_p0_ref_clk", "rg0_clk",
+"rg1_clk", "disppll_clk", "disphubpll_clk", "dsi_lp_clk", "dsi_core_clk", "dsi_pixel_clk", "pre_sor0_clk", "pre_sor1_clk", "dp_link_ref_clk", "sor_linka_input_clk", "sor_linka_afifo_clk",
+"sor_linka_afifo_m_clk", "rg0_m_clk", "rg1_m_clk", "sor0_m_clk", "sor1_m_clk", "pllhub_clk",
+"sor0_clk", "sor1_clk", "sor_pad_input_clk", "pre_sf0_clk", "sf0_clk",
+"sf1_clk", "dsi_pad_input_clk", "pre_sor0_ref_clk", "pre_sor1_ref_clk", "sor0_ref_pll_clk", "sor1_ref_pll_clk", "sor0_ref_clk", "sor1_ref_clk", "osc_clk",
+"dsc_clk", "maud_clk", "aza_2xbit_clk", "aza_bit_clk", "mipi_cal_clk",
+"uart_fst_mipi_cal_clk", "sor0_div_clk";
+resets = &lt;&amp;bpmp_resets TEGRA234_RESET_NVDISPLAY&gt;,
+&lt;&amp;bpmp_resets TEGRA234_RESET_DPAUX&gt;,
+&lt;&amp;bpmp_resets TEGRA234_RESET_DSI_CORE&gt;,
+&lt;&amp;bpmp_resets TEGRA234_RESET_MIPI_CAL&gt;;
+reset-names = "nvdisplay_reset",
+"dpaux0_reset", "dsi_core_reset", "mipi_cal_reset";
+status = "disabled";
+nvidia,disp-sw-soc-chip-id = &lt;0x2350&gt;;
+#if TEGRA_IOMMU_DT_VERSION &gt;= DT_VERSION_2
+interconnects = &lt;&amp;mc TEGRA234_MEMORY_CLIENT_NVDISPLAYR&gt;,
+&lt;&amp;mc TEGRA234_MEMORY_CLIENT_NVDISPLAYR1&gt;;
+interconnect-names = "dma-mem", "read-1";
+#endif
+iommus = &lt;&amp;smmu_iso TEGRA_SID_ISO_NVDISPLAY&gt;; non-coherent;
+nvdisplay-niso {
+compatible = "nvidia,tegra234-display-niso";
+iommus = &lt;&amp;smmu_niso0 TEGRA_SID_NISO0_NVDISPLAY&gt;; dma-coherent;
+};
+dsi {
+compatible = "nvidia,tegra234-dsi"; nvidia,active-panel = "NULL"; status = "disabled";
+};
+};</code></pre>
+            </div>
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><u class="+ topic/ph hi-d/u ph u">compatible:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - `compatible` contains the unique string to identify the external
+                NvDisplay DT node.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: " nvidia,tegra234-display"</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">power-domains:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - `power-domains` identifies the power domain display belongs to. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: &lt;&amp;bpmp TEGRA234_POWER_DOMAIN_DISP&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,num-dpaux-instance:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - num-dpaux-instance specifies the number of DPAUX pads on the
+                underlying platform.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: &lt;1&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">reg-names:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - reg-names mentions all of the MMIO device apertures that the display
+                driver needs access to.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Must contain an entry for all the register names</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_ukn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_ukn_vmh_qvb">
+                <li class="- topic/li li">nvdisplay</li>
+                <li class="- topic/li li">dpaux0</li>
+                <li class="- topic/li li">hdacodec (Not used by QNX driver)</li>
+                <li class="- topic/li li">mipical (Not used by QNX driver)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">reg:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Physical base address and length of the controller's registers </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Tuple in the form of address and length/size that describes the address range.
+                Must contain an entry for each register entry mentioned in the “reg” field:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_vkn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_vkn_vmh_qvb">
+                <li class="- topic/li li">0x0 0x13800000 0x0 0xEFFFF</li>
+                <li class="- topic/li li">0x0 0x155C0000 0x0 0xFFFF</li>
+                <li class="- topic/li li">0x0 0x0242c000 0x0 0x1000 (corresponds to hdacodec, Not used by QNX driver)</li>
+                <li class="- topic/li li">0x0 0x03990000 0x0 0x10000 (corresponds to mipical, Not used by QNX driver)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">interrupt-names:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Mentions the type of interrupts supported by NvDisplay node </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Must contain the following entries:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_wkn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_wkn_vmh_qvb">
+                <li class="- topic/li li">nvdisplay</li>
+                <li class="- topic/li li">dpaux0</li>
+                <li class="- topic/li li">hdacodec (Not used by QNX driver)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">interrupts:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: `interrupts` holds the IRQ number and IRQ type connected to NvDisplay. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Must contain an entry for each entry in interrupt-names. </p>
+            <p class="- topic/p p">0 416 4</p>
+            <p class="- topic/p p">0 419 4</p>
+            <p class="- topic/p p">0 61 4</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,bpmp:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: BPMP device, needed for NvDisplay </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: bpmp</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">clocks:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: `clocks` holds the type of clock IDs supported by NvDisplay. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: &lt;&amp;bpmp_clks TEGRA234_CLK_HUB&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DISP&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DPAUX&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_FUSE&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_VCO&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_CLKOUTPN&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSIPLL_CLKOUTA&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_VCO&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTPN&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTA&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_CLKOUTB&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV10&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV25&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL0_DIV27PN&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_VCO&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_CLKOUTPN&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SPPLL1_DIV27PN&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL0_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_VPLL1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_NVDISPLAY_P0_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_RG0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_RG1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DISPPLL&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DISPHUBPLL&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_LP&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_CORE&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_PIXEL&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DP_LINK_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_INPUT&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_AFIFO&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_LINKA_AFIFO_M&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_RG0_M&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_RG1_M&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_M&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_M&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PLLHUB&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR_PAD_INPUT&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SF0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SF0&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SF1&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSI_PAD_INPUT&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR0_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_PRE_SOR1_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_PLL_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_PLL_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR1_REF&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_OSC&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_DSC&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_MAUD&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_AZA_2XBIT&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_AZA_BIT&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_MIPI_CAL&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_UART_FST_MIPI_CAL&gt;,</p>
+            <p class="- topic/p p">&lt;&amp;bpmp_clks TEGRA234_CLK_SOR0_DIV&gt;;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">clock-names:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: List of clock input name strings sorted in the same order as the clocks
+                property. Consumer’s drivers will use clock-names to match clock input names with
+                clocks specifiers </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: "nvdisplayhub_clk", "nvdisplay_disp_clk", "nvdisplay_p0_clk",
+                "nvdisplay_p1_clk", "dpaux0_clk", "fuse_clk", "dsipll_vco_clk",
+                "dsipll_clkoutpn_clk", "dsipll_clkouta_clk", "sppll0_vco_clk",
+                "sppll0_clkoutpn_clk", "sppll0_clkouta_clk", "sppll0_clkoutb_clk",
+                "sppll0_div10_clk", "sppll0_div25_clk", "sppll0_div27_clk", "sppll1_vco_clk",
+                "sppll1_clkoutpn_clk", "sppll1_div27_clk", "vpll0_ref_clk", "vpll0_clk",
+                "vpll1_clk", "nvdisplay_p0_ref_clk", "rg0_clk", "rg1_clk", "disppll_clk",
+                "disphubpll_clk", "dsi_lp_clk", "dsi_core_clk", "dsi_pixel_clk", "pre_sor0_clk",
+                "pre_sor1_clk", "dp_link_ref_clk", "sor_linka_input_clk", "sor_linka_afifo_clk",
+                "sor_linka_afifo_m_clk", "rg0_m_clk", "rg1_m_clk", "sor0_m_clk", "sor1_m_clk",
+                "pllhub_clk", "sor0_clk", "sor1_clk", "sor_pad_input_clk", "pre_sf0_clk", "sf0_clk",
+                "sf1_clk", "dsi_pad_input_clk", "pre_sor0_ref_clk", "pre_sor1_ref_clk",
+                "sor0_ref_pll_clk", "sor1_ref_pll_clk", "sor0_ref_clk", "sor1_ref_clk", "osc_clk",
+                "dsc_clk", "maud_clk", "aza_2xbit_clk", "aza_bit_clk", "mipi_cal_clk",
+                "uart_fst_mipi_cal_clk", "sor0_div_clk";</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">resets:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: List of phandle and reset specifier pairs, one pair for each reset
+                signal that affects the device, or that the device manages.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_xkn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_xkn_vmh_qvb">
+                <li class="- topic/li li">TEGRA234_RESET_NVDISPLAY</li>
+                <li class="- topic/li li">TEGRA234_RESET_DPAUX</li>
+                <li class="- topic/li li">TEGRA234_RESET_DSI_CORE (Not used by QNX driver)</li>
+                <li class="- topic/li li">TEGRA234_RESET_MIPI_CAL (Not used by QNX driver)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">reset-names:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: The name of the resets mentioned in the “resets” field </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Must contain an entry for each value in the “resets” field:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_ykn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_ykn_vmh_qvb">
+                <li class="- topic/li li">nvdisplay_reset</li>
+                <li class="- topic/li li">dpaux0_reset</li>
+                <li class="- topic/li li">dsi_core_reset (Not used by QNX driver)</li>
+                <li class="- topic/li li">mipi_cal_reset (Not used by QNX driver)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">status:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Holds the status of NvDisplay </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: “okay” or “disabled”</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,disp-sw-soc-chip-id:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Mentions the SOC SW Chip ID </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: 0x2350</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">interconnects:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the bandwidth of the clients used by NvDisplay. This is only
+                if TEGRA_IOMMU_DT_VERSION is greater or equal to DT_VERSION_2. Not used on AV+L or
+                AV+Q.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_zkn_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_zkn_vmh_qvb">
+                <li class="- topic/li li">TEGRA234_MEMORY_CLIENT_NVDISPLAYR</li>
+                <li class="- topic/li li">TEGRA234_MEMORY_CLIENT_NVDISPLAYR1</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">interconnect-names:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Mentions the names of the interconnects used by NvDisplay. This is only
+                if TEGRA_IOMMU_DT_VERSION is greater or equal to DT_VERSION_2.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Must contain an entry for each value in “interconnects” field</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_aln_vmh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_aln_vmh_qvb">
+                <li class="- topic/li li">dma-mem</li>
+                <li class="- topic/li li">read-1</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">iommus:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Mentions the name of the IOMMU used by NvDisplay for ISO traffic. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: TEGRA_SID_ISO_NVDISPLAY</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">non-coherent:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Present because NvDisplay ISO accesses to DRAM are non-coherent. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: N/A</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_qxl_mnh_qvb" data-ofbid="concept_xrx_mmh_qvb__section_qxl_mnh_qvb"><h2 class="- topic/title title sectiontitle">nvdisplay-niso node</h2>
+            
+            <p class="- topic/p p">Contains details about the IOMMU instance used by NvDisplay for NISO memory
+                accesses.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_ujm_4nh_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_ujm_4nh_qvb"><code>nvdisplay-niso {
+compatible = "nvidia,tegra234-display-niso";
+iommus = &lt;&amp;smmu_niso0 TEGRA_SID_NISO0_NVDISPLAY&gt;; dma-coherent;
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">compatible:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - `compatible` contains the unique string to identify the external
+                NvDisplay-NISO DT node</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: " nvidia,tegra234-display-niso"</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">iommus:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Mentions the name of the IOMMU used by the NvDisplay-NISO node. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <div class="- topic/p p">Value:<ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_jbr_pnh_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_jbr_pnh_qvb">
+                    <li class="- topic/li li">TEGRA_SID_NISO0_NVDISPLAY</li>
+                </ul></div>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">dma-coherent:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Present because NvDisplay NISO memory accesses are DMA-coherent.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: N/A</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_scw_qnh_qvb" data-ofbid="concept_xrx_mmh_qvb__section_scw_qnh_qvb"><h2 class="- topic/title title sectiontitle">dsi node</h2>
+            
+            <p class="- topic/p p">Contains details about DSI, used by NvDisplay node. Is not used in automotive
+                QNX.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_kr3_snh_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_kr3_snh_qvb"><code>dsi {
+compatible = "nvidia,tegra234-dsi"; nvidia,active-panel = "NULL"; status = "disabled";
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">compatible:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - `compatible` contains the unique string to identify the external
+                NvDisplay-DSI DT node.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: " nvidia,tegra234-dsi"</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,active-panel:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Contains the active panels under DSI </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: " NULL"</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">status:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Holds the status of NvDisplay DSI node.</p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: “okay” or “disabled”</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_ffy_tnh_qvb" data-ofbid="concept_xrx_mmh_qvb__section_ffy_tnh_qvb"><h2 class="- topic/title title sectiontitle">Frozen Frame Detection</h2>
+            
+            <p class="- topic/p p">In order to enable frozen frame detection, these are the properties required. It uses
+                the regional CRC approach.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_gww_wnh_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_gww_wnh_qvb"><code>regional-crc {
+head0 {
+/* num regions */ num-regions = &lt;8&gt;;
+
+/* Array specifying "num-regions" region details.
+*	Each region has 4 entries in array:
+*	x-coordinate, y-coordinate, width and height
+*/
+regions = &lt;100 100 200 200
+400 300 200 200
+700 100 100 300
+900 200 400 300
+1400 100 400 300
+200 600 400 200
+700 600 200 300
+1200 600 400 300&gt;;
+
+/*
+*	Display driver will use this value to declare
+*	Frozen frame if CRC value for any region is repeated
+*	these many times.
+*/
+ff-detection-threshold = &lt;4&gt;;
+};
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">regional-crc:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Used to specify if regional CRC functionality can be enabled. If this entry is
+                removed then FF detection functionality is disabled. This node is optional and only
+                required if we need to enable Frozen Frame Detection.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">head0:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Specifies which head the regional CRC is enabled on, ex:head0, head1. Orin has only
+                two valid node names - head0 and head1. Either node, or both can be present based on
+                which head/stream the Frozen Frame detection is to be enabled for.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">num-regions:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies how many regions in given view-port will be used for regional
+                crc comparison.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: 1-9</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">regions:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to mention different areas (upto 9) within a viewport on display
+                image. Each region is described with 4 values mentioning the top left and bottom
+                right coordinates.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: All values are separated by space and start with values corresponding to the
+                first region upto max allowed regions as mentioned in “num-regions'' property. The
+                position and size of each region can be speciﬁed by the user.</p>
+            <div class="- topic/p p">For example:<ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_ql3_b4h_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_ql3_b4h_qvb">
+                    <li class="- topic/li li">
+                        <p class="- topic/p p">&lt;100100 200 200</p>
+                        <p class="- topic/p p">400300 200 200</p>
+                        <p class="- topic/p p">700100 100 300</p>
+                        <p class="- topic/p p">900200 400 300</p>
+                        <p class="- topic/p p">1400100 400 300</p>
+                        <p class="- topic/p p">200600 400 200</p>
+                        <p class="- topic/p p">700600 200 300</p>
+                        <p class="- topic/p p">1200600 400 300&gt;</p>
+                    </li>
+                </ul></div>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">ff-detection-threshold:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to specify after how many frames the FF detection is considered to
+                be true. If the CRC for any single region remains the same for this many frames, the
+                display driver will treat this as an error since it indicates that at least one
+                region of the frame is stuck.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Integer specifying the number of frames. For example: &lt;4&gt;</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_mb3_f4h_qvb" data-ofbid="concept_xrx_mmh_qvb__section_mb3_f4h_qvb"><h2 class="- topic/title title sectiontitle">Drive Setmode</h2>
+            
+            <p class="- topic/p p">When driver setmode is enabled, display setup + modeset will happen during the resmgr
+                init phase instead of deferring this to when the first display client comes up. So,
+                enabling driver setmode can improve "power-on to first pixel visible on screen"
+                latency. On QNX safety, driver setmode is enabled by default. On QNX Standard,
+                driver setmode can be enabled using Device Tree. Driver setmode can be enabled only
+                for the configuration which uses DP Serializer, on other configurations enabling it
+                will fail to load the display driver.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_pw4_g4h_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_pw4_g4h_qvb"><code>display@13800000 { nvidia,driver-setmode;
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,driver-setmode:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to enable driver setmode. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: Yes </p>
+            <p class="- topic/p p">Value: N/A</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_p3k_h4h_qvb" data-ofbid="concept_xrx_mmh_qvb__section_p3k_h4h_qvb"><h2 class="- topic/title title sectiontitle">Head to Window Assignment</h2>
+            
+            <p class="- topic/p p">Used to configure head to window assignment in the Device Tree. If an assignment is
+                not specified in the DT, the driver assigns windows (2N) and (2N + 1) to HEAD N. In
+                DT, specify the assignment using 64 bit mask, which is interpreted as:</p>
+            <table class="- topic/table table frame-all" id="concept_xrx_mmh_qvb__table_nzl_34h_qvb" data-ofbid="concept_xrx_mmh_qvb__table_nzl_34h_qvb" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                        <tr class="- topic/row">
+                            <th class="- topic/entry entry colsep-1 rowsep-1" id="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">
+                                <strong class="+ topic/ph hi-d/b ph b">Head-Bitmask</strong>
+                            </th>
+                            <th class="- topic/entry entry colsep-0 rowsep-1" id="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">
+                                <strong class="+ topic/ph hi-d/b ph b">Window-Number</strong>
+                            </th>
+                        </tr>
+                    </thead><tbody class="- topic/tbody tbody">
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(0-7)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">0</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(8-15)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">1</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(16-23)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">2</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(24-31)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">3</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(32-39)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">4</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(40-47)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">5</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(48-55)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-1" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">6</td>
+                        </tr>
+                        <tr class="- topic/row">
+                            <td class="- topic/entry entry colsep-1 rowsep-0" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__1">BITMASK(56-63)</td>
+                            <td class="- topic/entry entry colsep-0 rowsep-0" headers="concept_xrx_mmh_qvb__table_nzl_34h_qvb__entry__2">7</td>
+                        </tr>
+                    </tbody></table>
+            <p class="- topic/p p">The display driver fails to load if an invalid assignment is specified in the DT. The
+                specified assignment must adhere to the conditions below:</p>
+            <ol class="- topic/ol ol" id="concept_xrx_mmh_qvb__ol_pzl_34h_qvb" data-ofbid="concept_xrx_mmh_qvb__ol_pzl_34h_qvb">
+                <li class="- topic/li li">The specified window number must be supported by hardware.</li>
+                <li class="- topic/li li">The specified head number must be supported by hardware.</li>
+                <li class="- topic/li li">The same window must not be assigned simultaneously for multiple heads.</li>
+                <li class="- topic/li li">At least one window must be assigned to at least one head (that is, the
+                    specified window-head mask should not be 0).</li>
+            </ol>
+            <p class="- topic/p p">The display driver culls the head with no windows assigned, and all the heads above
+                it. For example, if hardware supports three heads and the user uses the assignment
+                mask to assign valid windows to head-0 and head-2 but no windows to head-1, then
+                head-1 and head-2 is culled.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_cdx_l4h_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_cdx_l4h_qvb"><code>display@13800000 {
+nvidia,window-head-mask = &lt;0x00000000 0x02010101&gt;;
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">nvidia,window-head-mask:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to specify the 64-bit window head assignment mask. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: If no value is specified, a default head&lt;-&gt;window assignment is used. If
+                not, any value which fits the criteria mentioned above will work.</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_yxg_n4h_qvb" data-ofbid="concept_xrx_mmh_qvb__section_yxg_n4h_qvb"><h2 class="- topic/title title sectiontitle">Static IMP</h2>
+            
+            <p class="- topic/p p">Starting from 6.0.5.0, QNX customers should enable static IMP. For enabling static
+                IMP, we need to program certain IMP settings in BCT and Device Tree files. Generated
+                using a host side tool called "laptsa-imp", we are able to generate this DT
+                fragment.</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_slv_44h_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_slv_44h_qvb"><code>static-imp-data {
+/* Window and cursor pool config */
+window-pool-config = &lt;0x227 0x227 0x227 0x227&gt;; cursor-pool-config = &lt;0x1f 0x1f&gt;;
+
+/* Window and cursor drain meter config */
+window-drain-meter-config = &lt;0x20 0x20 0x20 0x20&gt;; cursor-drain-meter-config = &lt;0x3 0x3&gt;;
+
+/* Window and cursor fetch meter config */ window-fetch-meter-config = &lt;0xf 0xf 0xf 0xf&gt;; cursor-fetch-meter-config = &lt;0x2 0x2&gt;;
+
+/* Delay before a START_FETCH command is sent to IsoHub */ start-fetch-delay-us = &lt;0x1a8 0x1a8&gt;;
+
+/* Elv start value */ elv-start = &lt;0x4 0x4&gt;;
+
+/* Clock Frequencies */ hub-clock-khz = &lt;82300&gt;;
+disp-clock-khz = &lt;311862&gt;;
+};
+};
+</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">window-pool-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the window pool config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Ex: &lt;0x227 0x227 0x227 0x227&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">cursor-pool-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the cursor pool config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Ex: &lt;0x1f 0x1f&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">window-drain-meter-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the window drain meter config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0x20 0x20 0x20 0x20&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">cursor-drain-meter-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the cursor drain meter config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0x3 0x3&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">window-fetch-meter-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the window fetch meter config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0xf 0xf 0xf 0xf&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">cursor-fetch-meter-config</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the cursor fetch meter config. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0x2 0x2&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">start-fetch-delay-us:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the delay before a START_FETCH command is sent to IsoHub.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0x1a8 0x1a8&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">elv-start:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the Elv start value.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;0x4 0x4&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hub-clock-khz:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the IsoHub clock frequency in KHz.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;82300&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">disp-clock-khz:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the display clock frequency in KHz.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;311862&gt;</p>
+        </section>
+        <section class="- topic/section section" id="concept_xrx_mmh_qvb__section_a3p_w4h_qvb" data-ofbid="concept_xrx_mmh_qvb__section_a3p_w4h_qvb"><h2 class="- topic/title title sectiontitle">Serializer</h2>
+            
+            <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b"><u class="+ topic/ph hi-d/u ph u">Configuring the Serializer Driver:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">To use the NVIDIA reference Maxim serializer driver, there are various ways to
+                configure the driver by Device Tree. An example Device Tree fragment is shown below
+                that configures the Maxim serializer chip in MST mode:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_kqs_y4h_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_kqs_y4h_qvb"><code>maxim_ser: max_gmsl_dp_ser@40 { compatible = "maxim,max_gmsl_dp_ser"; reg = &lt;0x40&gt;;
+status = "okay";
+max_gmsl_dp_ser-pwrdn = &lt;&amp;tegra_main_gpio TEGRA234_MAIN_GPIO(G, 3) GPIO_ACTIVE_HIGH&gt;;
+ser-errb = &lt;&amp;tegra_main_gpio TEGRA234_MAIN_GPIO(G, 7) 0&gt;; dprx-link-rate = &lt;0x1e&gt;;
+dprx-lane-count = &lt;0x4&gt;; enable-mst;
+mst-payload-ids = &lt;0x1 0x3 0x2 0x4&gt;; gmsl-stream-ids = &lt;0x0 0x1 0x2 0x3&gt;; gmsl-link-select = &lt;0x0 0x0 0x1 0x1&gt;; enable-dp-fec;
+enable-dsc = &lt;1 0&gt;;
+enable-gmsl-fec = &lt;1 0&gt;;
+};</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">compatible:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: `compatible` contains the unique string to identify the Maxim Serializer
+                DT node. </p>
+            <p class="- topic/p p">Customizable: No</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: "maxim,max_gmsl_dp_ser"</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">reg:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - I2C address of the Maxim display serializer.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: &lt;0x40&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">max_gmsl_dp_ser-pwrdn:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - GPIO pin number of the PWRDN pin. This pin is used to power up the
+                Maxim display serializer chip.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: TEGRA234_MAIN_GPIO(G, 3) GPIO_ACTIVE_HIGH</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">gmsl-link-select:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - This property is an array of four unsigned 8-bit values that
+                determines the GMSL output link to enable for each video pipe X, Y, Z, and U.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value:The possible values for each pipe are:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_ngt_x4h_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_ngt_x4h_qvb">
+                <li class="- topic/li li">0x0 (Link A)</li>
+                <li class="- topic/li li">0x1 (Link B)</li>
+                <li class="- topic/li li">0x2 (Link A + B)</li>
+            </ul>
+            <p class="- topic/p p">For example: &lt;0x0 0x0 0x1 0x1&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">dprx-link-rate:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Configures the DP link rate of the serializer chip.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: The default value is 0x1E (HBR3). The possible values are:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_ogt_x4h_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_ogt_x4h_qvb">
+                <li class="- topic/li li">0xA (HBR)</li>
+                <li class="- topic/li li">0x14 (HBR2)</li>
+                <li class="- topic/li li">0x1E (HBR3)</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">dprx-lane-count:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Configures the DP lane count of the serializer chip.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value:The default value is 0x4. The possible values are:</p>
+            <ul class="- topic/ul ul" id="concept_xrx_mmh_qvb__ul_pgt_x4h_qvb" data-ofbid="concept_xrx_mmh_qvb__ul_pgt_x4h_qvb">
+                <li class="- topic/li li">0x1</li>
+                <li class="- topic/li li">0x2</li>
+                <li class="- topic/li li">0x4</li>
+            </ul>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">ser-errb:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Specifies the GPIO pin number of the ERRB pin. This pin is used for
+                error and fault reporting by the serializer chip.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: TEGRA234_MAIN_GPIO(G, 7) 0</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">enable-mst:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Used to enable MST modes.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: Yes </p>
+            <p class="- topic/p p">Value: N/A</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">mst-payload-ids:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to represent MST payload IDs of pipe X, Y, Z, U. This property is
+                mandatory if enable-mst property is mentioned in dt.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: It is an array of four unsigned 8-bit values.</p>
+            <p class="- topic/p p">For example: &lt;0x1 0x3 0x2 0x4&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">gmsl-stream-ids:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to represent GMSL stream IDs of pipe X, Y, Z, U. This property is
+                mandatory if enable-mst property is mentioned in dt.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: It is an array of four unsigned 8-bit values.</p>
+            <p class="- topic/p p">For example: &lt;0x0 0x1 0x2 0x3&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">enable-dp-fec:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to enable FEC on DP link if serializer supports it.</p>
+            <p class="- topic/p p">Customizable: No </p>
+            <p class="- topic/p p">Optional: Yes </p>
+            <p class="- topic/p p">Value: N/A</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">enable-dsc:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Used to enable DSC.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: It is an array of two 32-bit values, where each value indicates whether DSC is
+                enabled or not. The first entry corresponds to video pipe X, and the second entry
+                corresponds to video pipe Y. DSC is only supported on pipe X currently.</p>
+            <p class="- topic/p p">For example: &lt;1 0&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">enable-gmsl-fec:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: - Used to enable FEC on the GMSL link.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: It is an array of two 32-bit values, where each value indicates whether FEC is
+                enabled on the GMSL link. The first entry corresponds to GMSL Link A, and the second
+                entry corresponds to GMSL Link B.</p>
+            <p class="- topic/p p">For example: &lt;1 0&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">Configuring video timings:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">For both SST and MST mode, the mode timings that are used for each stream must be
+                configured in Device Tree. Only one mode timing can be specified at a time for each
+                video stream. The timings that are exposed in the EDIDs of the serializer and the
+                panels connected to the downstream deserializer are completely ignored.</p>
+            <p class="- topic/p p">An example Device Tree fragment is shown below. In this example, a standard 1920x1080
+                at 60 Hz timing is specified for the first video stream, and a 1280x720 at 60 Hz
+                timing is specified for the second video stream:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_gfx_gph_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_gfx_gph_qvb"><code>display-timings {
+display-connector-0 { dcb-index = &lt;0&gt;;
+
+stream-0 {
+timings-phandle = &lt;&amp;mode0&gt;;
+};
+
+stream-1 {
+timings-phandle = &lt;&amp;mode1&gt;;
+};
+};
+};
+mode0: 1920-1080-60Hz {
+clock-frequency-khz = &lt;148500&gt;;
+hactive = &lt;1920&gt;;
+vactive = &lt;1080&gt;;
+hfront-porch = &lt;88&gt;;
+hback-porch = &lt;148&gt;;
+hsync-len = &lt;44&gt;;
+vfront-porch = &lt;4&gt;;
+vback-porch = &lt;36&gt;;
+vsync-len = &lt;5&gt;;
+rrx1k = &lt;60000&gt;;
+pps-data = [
+11 00 00 89 30 80 04 38
+07 80 04 38 03 c0 03 c0
+02 00 03 58 00 20 73 3e
+00 0d 00 0f 00 1d 00 0e
+18 00 10 f0 03 0c 20 00
+06 0b 0b 33 0e 1c 2a 38
+46 54 62 69 70 77 79 7b
+7d 7e 01 02 01 00 09 40
+09 be 19 fc 19 fa 19 f8
+1a 38 1a 78 22 b6 2a b6
+2a f6 2a f4 43 34 63 74
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 ];
+};
+
+mode1: 1280-720-60Hz {
+clock-frequency-khz = &lt;74250&gt;;
+hactive = &lt;1280&gt;;
+vactive = &lt;720&gt;;
+hfront-porch = &lt;110&gt;;
+hback-porch = &lt;220&gt;;
+hsync-len = &lt;40&gt;;
+vfront-porch = &lt;5&gt;;
+vback-porch = &lt;20&gt;;
+vsync-len = &lt;5&gt;;
+rrx1k = &lt;60000&gt;;
+};
+</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">display-timings:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Used to describe which timings are used for each stream.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">display-connector-0:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">The node specifies the timing information for the first display connector. If there
+                are multiple display connectors present on the board that require fixed timings,
+                then a new "display-connector" node must be created for each connector.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">dcb-index:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the logical index X of the DCB -&gt; Display Devices -&gt;
+                Display Device X entry in the display DCB blob that this connector entry applies
+                to.</p>
+            <p class="- topic/p p">Customizable: Yes </p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: Has to be a valid logical index. If there is only one display connector on the
+                board, then "dcb-index" defaults to 0.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">stream-0:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">The nodes specify the phandle of the mode timing node that applies to the given video
+                stream. Each "display-connector" can only have up to two (2) "stream" nodes. Note
+                that it is fine to specify two (2) "stream" nodes even if the display serializer
+                operates in SST mode because only the first "stream" node is consumed by the display
+                driver. The extra node is ignored.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">timings-phandle:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the phandle of the mode timing node. </p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: N/A</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">mode0:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Each "mode" node contains the actual mode timing parameters that will be used for a
+                given video stream.</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">clock-frequency-khz:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Specifies the pixel clock frequency in KHz.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;148500&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hactive:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Horizontal active pixels.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;1920&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">vactive:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Vertical active pixels.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;1080&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hfront-porch:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Horizontal front porch.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;88&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hback-porch:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Horizontal back porch.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;148&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hsync-len:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Horizontal sync width.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;44&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">vfront-porch:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Vertical front porch.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: For example: &lt;4&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">hback-porch:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Horizontal back porch.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: Ex: &lt;36&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">vsync-len:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Vertical sync width.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No </p>
+            <p class="- topic/p p">Value: Ex: &lt;5&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">rrx1k:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: Refresh rates in units of 0.001Hz.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: No</p>
+            <p class="- topic/p p">Value: For example: &lt;60000&gt;</p>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">pps-data:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">Description: All 128B of the DSC PPS.</p>
+            <p class="- topic/p p">Customizable: Yes</p>
+            <p class="- topic/p p">Optional: Yes</p>
+            <p class="- topic/p p">Value: This property should be specified if DSC will be enabled for the given timing.
+                For example:</p>
+            <pre class="+ topic/pre pr-d/codeblock pre codeblock" id="concept_xrx_mmh_qvb__codeblock_upd_qph_qvb" data-ofbid="concept_xrx_mmh_qvb__codeblock_upd_qph_qvb"><code>[
+11 00 00 89 30 80 04 38
+07 80 04 38 03 c0 03 c0
+02 00 03 58 00 20 73 3e
+00 0d 00 0f 00 1d 00 0e
+18 00 10 f0 03 0c 20 00
+06 0b 0b 33 0e 1c 2a 38
+46 54 62 69 70 77 79 7b
+7d 7e 01 02 01 00 09 40
+09 be 19 fc 19 fa 19 f8
+1a 38 1a 78 22 b6 2a b6
+2a f6 2a f4 43 34 63 74
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 ]
+</code></pre>
+            <p class="- topic/p p">
+                <strong class="+ topic/ph hi-d/b ph b">
+                    <u class="+ topic/ph hi-d/u ph u">DCB Tool:</u>
+                </strong>
+            </p>
+            <p class="- topic/p p">DCB tool is packaged in the following path:</p>
+            <p class="- topic/p p">$(SDK_TOOLS_DIR)/dcb_tool/dcb_tool </p>
+            <p class="- topic/p p">If you want to modify the DCB blob in DT, refer to the DCB documentation at:</p>
+            <p class="- topic/p p">$(SDK_TOOLS_DIR)/dcb_tool/readme.txt</p>
+        </section>
+    </div>
+</article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_kbx_4mh_qvb" data-tocid="concept_xrx_mmh_qvb__section_kbx_4mh_qvb">NvDisplay</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_qxl_mnh_qvb" data-tocid="concept_xrx_mmh_qvb__section_qxl_mnh_qvb">nvdisplay-niso node</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_scw_qnh_qvb" data-tocid="concept_xrx_mmh_qvb__section_scw_qnh_qvb">dsi node</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_ffy_tnh_qvb" data-tocid="concept_xrx_mmh_qvb__section_ffy_tnh_qvb">Frozen Frame Detection</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_mb3_f4h_qvb" data-tocid="concept_xrx_mmh_qvb__section_mb3_f4h_qvb">Drive Setmode</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_p3k_h4h_qvb" data-tocid="concept_xrx_mmh_qvb__section_p3k_h4h_qvb">Head to Window Assignment</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_yxg_n4h_qvb" data-tocid="concept_xrx_mmh_qvb__section_yxg_n4h_qvb">Static IMP</a></div></li><li class="section-item"><div class="section-title"><a href="#concept_xrx_mmh_qvb__section_a3p_w4h_qvb" data-tocid="concept_xrx_mmh_qvb__section_a3p_w4h_qvb">Serializer</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+   <script>
+      if (typeof _satellite !== "undefined") {_satellite.pageBottom();}
+    </script>
+   <script src="https://api-prod.nvidia.com/search/nvidia-search-library.js"></script>
+   <script>NvidiaSearchLibrary.BoxWidget.mount({
+      site: 'https://docs.nvidia.com',
+      language: 'en-us',
+      queryParam: 'q',
+      placeholder: 'Search docs...',
+      destination: 'https://docs.nvidia.com/drive/dnc-search.html',
+      triggerId: 'nvidia-search-box-link',
+      referenceId: 'nvidia-search-box-link'
+    });</script>
+
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    
+<div class="footer">
+    <!-- Footer -->
+    <div class="page-footer-wrapper" id="brandFooter">
+       <div class="page-footer">
+         <div class="nv-copyright-publication">
+         </div><div xmlns="" class="nv-pub"><div class="confidentiality_info">
+                Subject to Change | For test and development only.
+            </div><div class="generation_time"> Published: 11/30/2022 4:42 a.m. | 
+          <span>
+                PR-10720-6.0
+            </span></div><div></div></div>
+          <!-- START Social -->
+          <div class="page-footer__social">
+             <div class="page-footer__social__label">Follow DRIVE OS</div>
+             <a href="http://www.facebook.com/NVIDIA" class="page-footer__social__link facebook" target="_blank" alt="Follow GeForce on Facebook" title="Follow GeForce on Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="46" viewBox="0 0 22 46">
+                   <title>Facebook</title>
+                   <path d="M28.638,16.072V12.109a8.484,8.484,0,0,1,.085-1.381,2.648,2.648,0,0,1,.387-0.963,1.579,1.579,0,0,1,.974-0.656,7.1,7.1,0,0,1,1.791-.182h4.066V1h-6.5Q23.8,1,21.335,3.609T18.872,11.3v4.773H14V24h4.869V47h9.766V24h6.5L36,16.072h-7.36Z" transform="translate(-14 -1)"></path>
+                </svg>
+             </a>
+             <a href="http://twitter.com/nvidiadc" class="page-footer__social__link" target="_blank" alt="Follow GeForce on Twitter" title="Follow GeForce on Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="37.375" viewBox="0 0 46 37.375">
+                   <title>Twitter</title>
+                   <path d="M47,9.749a18.8,18.8,0,0,1-5.429,1.461,9.159,9.159,0,0,0,4.145-5.2,18.5,18.5,0,0,1-5.985,2.278,9.449,9.449,0,0,0-13.56-.219,9.092,9.092,0,0,0-2.759,6.673A10.469,10.469,0,0,0,23.65,16.9,26.266,26.266,0,0,1,12.8,14a26.733,26.733,0,0,1-8.6-6.965,9.243,9.243,0,0,0-1.284,4.76,9.192,9.192,0,0,0,1.139,4.5,9.421,9.421,0,0,0,3.065,3.358,9.35,9.35,0,0,1-4.262-1.2v0.117a9.117,9.117,0,0,0,2.145,6,9.273,9.273,0,0,0,5.415,3.256,9.757,9.757,0,0,1-2.481.321A12.021,12.021,0,0,1,6.164,28a9.45,9.45,0,0,0,8.816,6.541,18.457,18.457,0,0,1-11.706,4.03A20.123,20.123,0,0,1,1,38.456,26.177,26.177,0,0,0,15.476,42.69,27.548,27.548,0,0,0,24.9,41.1a23.966,23.966,0,0,0,7.532-4.264,28.514,28.514,0,0,0,5.386-6.147,27.4,27.4,0,0,0,3.371-7.257A26.806,26.806,0,0,0,42.3,15.852q0-.818-0.029-1.227A19.746,19.746,0,0,0,47,9.749Z" transform="translate(-1 -5.313)"></path>
+                </svg>
+             </a>
+             <a href="https://www.linkedin.com/company/nvidia" class="page-footer__social__link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                   <title>LinkedIn</title>
+                   <path d="M1.569,16.3h9.883V45.985H1.569V16.3Zm42.317,2.711a10.635,10.635,0,0,0-8.235-3.4,11.875,11.875,0,0,0-3.43.464,7.783,7.783,0,0,0-2.605,1.3,11.16,11.16,0,0,0-2.86,3.142V16.3H16.9l0.03,1.438q0.03,1.438.03,8.866T16.9,45.985h9.853V29.421a7.242,7.242,0,0,1,.329-2.426,6.365,6.365,0,0,1,1.9-2.561,4.849,4.849,0,0,1,3.16-1.034,4.26,4.26,0,0,1,3.789,1.782,8.667,8.667,0,0,1,1.213,4.927V45.984H47V28.972Q47,22.412,43.886,19.014ZM6.57,2.015A5.637,5.637,0,0,0,2.542,3.468,4.823,4.823,0,0,0,1,7.137a4.909,4.909,0,0,0,1.5,3.654A5.4,5.4,0,0,0,6.45,12.258H6.51a5.642,5.642,0,0,0,4.058-1.468,4.742,4.742,0,0,0,1.512-3.654,5,5,0,0,0-1.527-3.669A5.475,5.475,0,0,0,6.57,2.015Z" transform="translate(-1 -2)"></path>
+                </svg>
+             </a>
+             <a href="http://www.youtube.com/user/nvidia" class="page-footer__social__link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38.125" height="46" viewBox="0 0 576 512">
+                   <title>YouTube</title>
+                   <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                </svg>
+             </a>
+          </div>
+          <!-- END Social -->
+       </div>
+    </div>
+    <!-- /Footer -->
+    <!-- Global footer -->
+    <div class="global-footer-container">
+       <div class="global-footer" id="globalFooter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="global-footer__logo" viewBox="0 407.8 1000 184.4" enable-background="new 0 407.8 1000 184.4" xml:space="preserve">
+             <title>NVIDIA</title>
+             <g id="nvidia-logo">
+                <path d="M987.1 555.7v-2.8h1.7c0.9 0 2.3 0.1 2.3 1.2 0 1.2-0.7 1.5-1.8 1.5H987.1M987.1 557.6h1.2l2.8 4.8h3l-3.1-5c1.5-0.1 2.9-0.8 2.9-3 0-2.7-1.8-3.5-4.9-3.5h-4.4v11.5h2.6L987.1 557.6M1000 556.7c0-6.8-5.2-10.7-11.1-10.7 -5.8 0-11.1 3.9-11.1 10.7 0 6.8 5.2 10.7 11.1 10.7S1000 563.5 1000 556.7M996.8 556.7c0 4.9-3.6 8.2-7.9 8.2l0 0c-4.4 0-7.9-3.3-7.9-8.2 0-4.9 3.6-8.2 7.9-8.2C993.2 548.6 996.8 551.9 996.8 556.7z"></path>
+                <path d="M593.2 442.7v121.1h34.2V442.7H593.2zM324.4 442.5v121.2h34.5v-94.1l26.9 0.1c8.8 0 15 2.2 19.2 6.7 5.4 5.7 7.6 15.1 7.6 32v55.3H446v-66.9c0-47.8-30.5-54.3-60.2-54.3C385.8 442.5 324.4 442.5 324.4 442.5zM648.3 442.7v121.1h55.4c29.5 0 39.2-4.9 49.6-15.9 7.4-7.7 12.1-24.7 12.1-43.3 0-17-4-32.2-11.1-41.7 -12.5-16.9-30.8-20.2-58.1-20.2H648.3zM682.2 469h14.7c21.3 0 35.1 9.5 35.1 34.4 0 24.8-13.7 34.4-35.1 34.4h-14.7V469zM544 442.7l-28.5 95.9 -27.3-95.9h-36.9l39 121.1h49.2l39.3-121.1H544zM781.4 563.7h34.2v-121h-34.2V563.7zM877.2 442.7l-47.7 121h33.7l7.6-21.3h56.5l7.2 21.3h36.6l-48.2-121H877.2zM899.4 464.8l20.7 56.6H878L899.4 464.8z"></path>
+                <path d="M103.9 462.8v-16.6c1.6-0.1 3.3-0.2 4.9-0.2 45.6-1.4 75.4 39.1 75.4 39.1s-32.2 44.8-66.8 44.8c-5 0-9.4-0.8-13.4-2.2v-50.5c17.7 2.2 21.3 10 32 27.7l23.7-20c0 0-17.3-22.7-46.5-22.7C110 462.3 106.9 462.5 103.9 462.8M103.9 407.8v24.8c1.6-0.1 3.3-0.2 4.9-0.3 63.3-2.2 104.6 51.9 104.6 51.9s-47.4 57.7-96.7 57.7c-4.5 0-8.7-0.4-12.7-1.1v15.4c3.4 0.4 7 0.7 10.6 0.7 46 0 79.2-23.5 111.4-51.2 5.3 4.3 27.2 14.7 31.7 19.2 -30.6 25.6-101.9 46.3-142.3 46.3 -3.9 0-7.6-0.2-11.3-0.6v21.6h174.7V407.8H103.9zM103.9 527.8v13.1c-42.5-7.6-54.3-51.8-54.3-51.8s20.4-22.6 54.3-26.3v14.4c0 0 0 0-0.1 0 -17.7-2.2-31.7 14.5-31.7 14.5S80 519.6 103.9 527.8M28.4 487.2c0 0 25.2-37.1 75.5-41v-13.5C48.2 437.2 0 484.4 0 484.4s27.3 79 103.9 86.3v-14.4C47.7 549.2 28.4 487.2 28.4 487.2z"></path>
+             </g>
+          </svg>
+          <div class="global-footer__region">
+             <a href="https://www.nvidia.com/object/country-selector.html" target="_self">
+                <!--<img class="global-footer__region__icon" src="https://images.nvidia.com/etc/designs/nvidiaGDC/clientlibs_base/images/country-selector/us.png" />-->
+                <span class="global-footer__region__label">
+                USA - United States
+                </span>
+             </a>
+          </div>
+          <ul class="global-footer__links">
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">Privacy Policy</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">Manage My Privacy</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/" target="_blank">Legal</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">Accessibility</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">Product Security</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/contact/" target="_blank">Contact</a>
+             </li>
+          </ul>
+          <div class="global-footer__copyright">Copyright © 2022 NVIDIA CORPORATION &amp; AFFILIATES. All rights reserved.</div>
+       </div>
+    </div>
+    <!-- /Global footer -->
+ </div>
+ 
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

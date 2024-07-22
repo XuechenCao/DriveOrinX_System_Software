@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSiplISPStatisticsWindows" name="nvsipl::NvSiplISPStatisticsWindows">
+<area shape="rect" id="node1" title="Defines the windows used in ISP stats calculations." alt="" coords="5,95,175,136"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="27,5,153,32"/>
+</map>

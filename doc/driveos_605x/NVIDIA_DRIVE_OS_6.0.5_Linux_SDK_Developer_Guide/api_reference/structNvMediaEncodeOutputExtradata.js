@@ -1,0 +1,27 @@
+var structNvMediaEncodeOutputExtradata =
+[
+    [ "AvgQP", "structNvMediaEncodeOutputExtradata.html#ae9b395a3902522ea07dbb158374646d5", null ],
+    [ "bEndOfFrame", "structNvMediaEncodeOutputExtradata.html#aa0786797834217cffb4d9176d2e9ce52", null ],
+    [ "bIsGoldenOrAlternateFrame", "structNvMediaEncodeOutputExtradata.html#a8514c1faff32a9270c96245b576f5bb3", null ],
+    [ "bkeyFrame", "structNvMediaEncodeOutputExtradata.html#a9fa4c085f0c09850031c869fc796f3d4", null ],
+    [ "bMVbufferdump", "structNvMediaEncodeOutputExtradata.html#a596fad9c13290758ddc4435619c4aa1e", null ],
+    [ "bRPSFeedback", "structNvMediaEncodeOutputExtradata.html#a63a56281cbe6b1a41cf3d15e9886d5d1", null ],
+    [ "bValidReconCRC", "structNvMediaEncodeOutputExtradata.html#a3ebfdfb676766a923501a4381d3c2929", null ],
+    [ "codec", "structNvMediaEncodeOutputExtradata.html#a8b14be14fa82cc00c5424c9a580b9f05", null ],
+    [ "codecExData", "structNvMediaEncodeOutputExtradata.html#af308edf85ded8b3884f4ac4c18d90dbe", null ],
+    [ "FrameStats", "structNvMediaEncodeOutputExtradata.html#a1e9bd0d068a8704d92b132ae207e59d4", null ],
+    [ "MVBufferDumpSize", "structNvMediaEncodeOutputExtradata.html#ac8415cdb538ab7078215efb069fe1691", null ],
+    [ "MVBufferDumpStartOffset", "structNvMediaEncodeOutputExtradata.html#a5cd340997a79c38a93c9e14b3b483fca", null ],
+    [ "RPSList", "structNvMediaEncodeOutputExtradata.html#a135c3cc005ea2dda6f6c6847e1339b72", null ],
+    [ "ulActiveRefFrames", "structNvMediaEncodeOutputExtradata.html#a84f5c6cb20e58e08d2853f0c6b45f704", null ],
+    [ "ulCurrentRefFrameId", "structNvMediaEncodeOutputExtradata.html#ac1b68a10f5ebdc760b0ff0b1ec8ad02c", null ],
+    [ "ulExtraDataSize", "structNvMediaEncodeOutputExtradata.html#a50a602ef4b336f69a78f2927200e1804", null ],
+    [ "ulFrameMaxQP", "structNvMediaEncodeOutputExtradata.html#acde9d1c3c4f48c4704c984226f64acf7", null ],
+    [ "ulFrameMinQP", "structNvMediaEncodeOutputExtradata.html#aaecdd28cc4d054eeb12f7e9832b0a379", null ],
+    [ "ulHdrSize", "structNvMediaEncodeOutputExtradata.html#aa05f46dcd0011b7eae9982944d5d7aab", null ],
+    [ "ulHrdBitrate", "structNvMediaEncodeOutputExtradata.html#a6d1826b76786c2776ca73caac189bce8", null ],
+    [ "ulReconCRC_U", "structNvMediaEncodeOutputExtradata.html#a06b3a71fe6e23a90a11709066d3b608e", null ],
+    [ "ulReconCRC_V", "structNvMediaEncodeOutputExtradata.html#a53f72356f7eb3613eb0252bf81daabf4", null ],
+    [ "ulReconCRC_Y", "structNvMediaEncodeOutputExtradata.html#a8cfeb8698442025c332300e7f6a7bd98", null ],
+    [ "ulVbvBufSize", "structNvMediaEncodeOutputExtradata.html#a68066d1682bb0e429b985dbaf8f087d2", null ]
+];

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Device-side implementation","href":"common\/topics\/bootloader_setup\/Device-sideimplementation39.html","attributes":{"data-id":"Device-sideimplementation39"},"menu":{"hasChildren":false},"tocID":"Device-sideimplementation39-d14923e28895","topics":[]}]});

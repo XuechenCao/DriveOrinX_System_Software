@@ -1,0 +1,5 @@
+<map id="NvMediaEncodeConfigAV1" name="NvMediaEncodeConfigAV1">
+<area shape="rect" id="node1" title="Holds AV1 encoder configuration parameters." alt="" coords="5,201,176,228"/>
+<area shape="rect" id="node2" href="$structNvMediaEncodeQP.html" title="Holds quantization parameters (QP) value for frames." alt="" coords="27,5,154,32"/>
+<area shape="rect" id="node3" href="$structNvMediaEncodeRCParams.html" title="Holds rate control configuration parameters." alt="" coords="139,111,309,137"/>
+</map>

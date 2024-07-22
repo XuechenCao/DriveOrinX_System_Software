@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['queue_20operation_20mode_3355',['queue operation mode',['../group__MTL.html',1,'']]],
+  ['q_5fscale_5ftype_3356',['q_scale_type',['../structNvMediaPictureInfoMPEG1Or2.html#abffc2ca3ab3cfb30bc39c69c6403e10a',1,'NvMediaPictureInfoMPEG1Or2']]],
+  ['qindex_3357',['qindex',['../structosi__core__avb__algorithm.html#a6968fede28cb1e1eeb38460642611661',1,'osi_core_avb_algorithm']]],
+  ['qinx_3358',['qinx',['../structether__exported__ifr__data.html#a597a64c1ae07b27421c02088e556c414',1,'ether_exported_ifr_data']]],
+  ['qm_5fu_3359',['qm_u',['../struct__NvMediaPictureInfo__AV1.html#adb43f082576b6424fa87e87179960f2e',1,'_NvMediaPictureInfo_AV1']]],
+  ['qm_5fv_3360',['qm_v',['../struct__NvMediaPictureInfo__AV1.html#ae18a3c34dc72544a2990003fbc083832',1,'_NvMediaPictureInfo_AV1']]],
+  ['qm_5fy_3361',['qm_y',['../struct__NvMediaPictureInfo__AV1.html#a39b5142644de86edcda8b9c1fee9e8ec',1,'_NvMediaPictureInfo_AV1']]],
+  ['qp_3362',['qp',['../structNvMediaMotionVectorMB__Metadata.html#ae8100e34853919217883b9759f0e53b8',1,'NvMediaMotionVectorMB_Metadata']]],
+  ['qpchac_3363',['qpChAc',['../structNvMediaPictureInfoVP9.html#aad04da0e5b34e2496a6e6b1566444d44',1,'NvMediaPictureInfoVP9']]],
+  ['qpchdc_3364',['qpChDc',['../structNvMediaPictureInfoVP9.html#a93de14c383830f26acd4f8899d7694a6',1,'NvMediaPictureInfoVP9']]],
+  ['qpdeltabuffer_3365',['QPDeltaBuffer',['../structNvMediaEncodeInputExtradata.html#a716bdebbb02cd3cc8d8ca3b262f6d04a',1,'NvMediaEncodeInputExtradata']]],
+  ['qpdeltabuffersize_3366',['QPDeltaBufferSize',['../structNvMediaEncodeInputExtradata.html#a967eca2e60e5a230a4a43c59cd90fbbf',1,'NvMediaEncodeInputExtradata']]],
+  ['qpinterb_3367',['qpInterB',['../group__x__h264__encoder__api.html#ga1d03cce290792728ac27597953c21db9',1,'NvMediaEncodeQP']]],
+  ['qpinterp_3368',['qpInterP',['../group__x__h264__encoder__api.html#ga9d32465774884bbc354c4a62946803ff',1,'NvMediaEncodeQP']]],
+  ['qpintra_3369',['qpIntra',['../group__x__h264__encoder__api.html#ga4af53387368773fd13b443d9b83f98c8',1,'NvMediaEncodeQP']]],
+  ['qpprime_5fy_5fzero_5ftransform_5fbypass_5fflag_3370',['qpprime_y_zero_transform_bypass_flag',['../structNvMediaPictureInfoH264.html#a5539bf0e649631498bc3d393930e4d78',1,'NvMediaPictureInfoH264']]],
+  ['qpyac_3371',['qpYAc',['../structNvMediaPictureInfoVP9.html#a688cd3a592097ecb5ffd0ba95adbf1b3',1,'NvMediaPictureInfoVP9']]],
+  ['qpydc_3372',['qpYDc',['../structNvMediaPictureInfoVP9.html#a34a85045657d3c219f7f632a47387f3b',1,'NvMediaPictureInfoVP9']]],
+  ['quality_3373',['quality',['../group__x__h264__encoder__api.html#gaa8528b5e4afee64d75d29ad0328051d8',1,'NvMediaEncodeConfigH264::quality()'],['../group__x__h264__encoder__api.html#gad7ea9440e4b191ab7028fc7343b2d055',1,'NvMediaEncodeConfigH265::quality()'],['../group__x__h264__encoder__api.html#ga81752d4659b2ee8bcfe8e01da692c6f2',1,'NvMediaEncodeConfigAV1::quality()'],['../structNvMediaJPEncAttributes.html#a55553e04bf564a6cce1c31fd38b8def3',1,'NvMediaJPEncAttributes::quality()']]],
+  ['quant_5ftype_3374',['quant_type',['../structNvMediaPictureInfoMPEG4Part2.html#a1b8fd051eeff8a8fe64380d8fa5517ae',1,'NvMediaPictureInfoMPEG4Part2']]],
+  ['quantization_3375',['quantization',['../struct__NvMediaPictureInfo__AV1.html#ab47b34934b02334ddf3378a011d66abc',1,'_NvMediaPictureInfo_AV1']]],
+  ['quantizer_3376',['quantizer',['../structNvMediaPictureInfoVC1.html#a7b5d5f4005349e8eadaf36e31c06879f',1,'NvMediaPictureInfoVC1']]],
+  ['quarter_5fsample_3377',['quarter_sample',['../structNvMediaPictureInfoMPEG4Part2.html#ae51426226902de78991570eb152a8855',1,'NvMediaPictureInfoMPEG4Part2']]],
+  ['quincunx_5fsampling_5fflag_3378',['quincunx_sampling_flag',['../structNvMediaSEIPayloadH264.html#a90b08bb1c2d38a7d05580b04bac78214',1,'NvMediaSEIPayloadH264']]]
+];

@@ -1,0 +1,6 @@
+<map id="nvsipl::NvSiplISPFlickerBandStats" name="nvsipl::NvSiplISPFlickerBandStats">
+<area shape="rect" id="node1" title="Holds controls for flicker band statistics (FB Stats)." alt="" coords="39,184,194,225"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="5,95,132,121"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="157,95,311,121"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="157,5,311,32"/>
+</map>

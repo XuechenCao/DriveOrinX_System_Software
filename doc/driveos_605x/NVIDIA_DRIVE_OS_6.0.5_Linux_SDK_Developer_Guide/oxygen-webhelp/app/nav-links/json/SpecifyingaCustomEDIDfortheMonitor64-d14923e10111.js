@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To specify a custom EDID for the monitor","href":"common\/topics\/window_system_stub\/TospecifyacustomEDIDforthemonitor67.html","attributes":{"data-id":"TospecifyacustomEDIDforthemonitor67"},"menu":{"hasChildren":false},"tocID":"TospecifyacustomEDIDforthemonitor67-d14923e10119","topics":[]}]});

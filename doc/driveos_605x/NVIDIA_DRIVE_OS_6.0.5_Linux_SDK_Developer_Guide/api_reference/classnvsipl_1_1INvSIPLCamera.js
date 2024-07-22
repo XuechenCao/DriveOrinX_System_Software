@@ -1,0 +1,28 @@
+var classnvsipl_1_1INvSIPLCamera =
+[
+    [ "~INvSIPLCamera", "classnvsipl_1_1INvSIPLCamera.html#a17b8c6194383b6116eb78f307a7698ec", null ],
+    [ "Deinit", "classnvsipl_1_1INvSIPLCamera.html#aff3d0798198a31e1a7921c83ff5af3d0", null ],
+    [ "DisableLink", "classnvsipl_1_1INvSIPLCamera.html#ab1e11396f0f08f226b9c13336d513b89", null ],
+    [ "EnableLink", "classnvsipl_1_1INvSIPLCamera.html#ad05ba09cd61305ae62671a7e0533e7fd", null ],
+    [ "FillNvSciSyncAttrList", "classnvsipl_1_1INvSIPLCamera.html#acd80fd2dcc0724c63b5bbe8b54b6345a", null ],
+    [ "GetDeserializerErrorInfo", "classnvsipl_1_1INvSIPLCamera.html#afa56c624e006571585cd3703477581d7", null ],
+    [ "GetDeserializerInterfaceProvider", "classnvsipl_1_1INvSIPLCamera.html#a9b89abd1cd9a9df4c74bc09a7a501638", null ],
+    [ "GetErrorGPIOEventInfo", "classnvsipl_1_1INvSIPLCamera.html#a8931f2b886c136cb8d18bf0d07080e2b", null ],
+    [ "GetImageAttributes", "classnvsipl_1_1INvSIPLCamera.html#a800f20b2abb58897aa3c672e61bf5874", null ],
+    [ "GetInstance", "classnvsipl_1_1INvSIPLCamera.html#a11634bf312e15a083d45f92ed8791b04", null ],
+    [ "GetMaxErrorSize", "classnvsipl_1_1INvSIPLCamera.html#a28f141ec53d5c3b165ae7dacb9e4341f", null ],
+    [ "GetModuleErrorInfo", "classnvsipl_1_1INvSIPLCamera.html#ac068d23caf12c4f815c0601aec944257", null ],
+    [ "GetModuleInterfaceProvider", "classnvsipl_1_1INvSIPLCamera.html#a17b82cb80b571be6bc6f75c35549e4c7", null ],
+    [ "Init", "classnvsipl_1_1INvSIPLCamera.html#a5ea69c4c93f839ce6b86420b7cdb8ad0", null ],
+    [ "ReadEEPROMData", "classnvsipl_1_1INvSIPLCamera.html#a34e21ab1bbd3faca3dd46f7fc8a2af7f", null ],
+    [ "RegisterAutoControlPlugin", "classnvsipl_1_1INvSIPLCamera.html#aaba89991ad75bef5b9abf95002c5adcf", null ],
+    [ "RegisterImages", "classnvsipl_1_1INvSIPLCamera.html#aeb039b78b216013784654985346af728", null ],
+    [ "RegisterNvSciSyncObj", "classnvsipl_1_1INvSIPLCamera.html#a220e761f59710bb9c290adefa0b57dc9", null ],
+    [ "SetPipelineCfg", "classnvsipl_1_1INvSIPLCamera.html#ab8908aaf6991482b0a67ce2684234e6e", null ],
+    [ "SetPlatformCfg", "classnvsipl_1_1INvSIPLCamera.html#a87e541fb56092ed4f3a6ab81fe7ef995", null ],
+    [ "SetPlatformCfg", "classnvsipl_1_1INvSIPLCamera.html#ac3bb6c78f7251ee5666621309adde0d4", null ],
+    [ "SetSensorCharMode", "classnvsipl_1_1INvSIPLCamera.html#a21de1ff999eb8962f7a69cbf358a4a3d", null ],
+    [ "Start", "classnvsipl_1_1INvSIPLCamera.html#ae265de46988e46f2719b0c075e721e19", null ],
+    [ "Stop", "classnvsipl_1_1INvSIPLCamera.html#a4abc9d68fe563d07ad612b5c421da801", null ],
+    [ "ToggleLED", "classnvsipl_1_1INvSIPLCamera.html#a9ba0a26f4e1d3ebe8b105bddfc370480", null ]
+];

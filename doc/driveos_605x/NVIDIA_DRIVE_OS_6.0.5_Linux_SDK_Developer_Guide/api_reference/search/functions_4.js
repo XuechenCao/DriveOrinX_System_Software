@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['get_4112',['Get',['../classnvsipl_1_1INvSIPLFrameCompletionQueue.html#afe6dd3341f94c889097ccaab7d8199b9',1,'nvsipl::INvSIPLFrameCompletionQueue::Get()'],['../classnvsipl_1_1INvSIPLNotificationQueue.html#ad95409b363a3147c52029a912206d4b3',1,'nvsipl::INvSIPLNotificationQueue::Get()']]],
+  ['getcount_4113',['GetCount',['../classnvsipl_1_1INvSIPLFrameCompletionQueue.html#a998652e672246201b47637fcdc67f797',1,'nvsipl::INvSIPLFrameCompletionQueue::GetCount()'],['../classnvsipl_1_1INvSIPLNotificationQueue.html#ae188e708b7ad783b50555d945021a83d',1,'nvsipl::INvSIPLNotificationQueue::GetCount()']]],
+  ['getdeserializererrorinfo_4114',['GetDeserializerErrorInfo',['../classnvsipl_1_1INvSIPLCamera.html#afa56c624e006571585cd3703477581d7',1,'nvsipl::INvSIPLCamera']]],
+  ['getdeserializerinterfaceprovider_4115',['GetDeserializerInterfaceProvider',['../classnvsipl_1_1INvSIPLCamera.html#a9b89abd1cd9a9df4c74bc09a7a501638',1,'nvsipl::INvSIPLCamera']]],
+  ['getdeviceinfolist_4116',['GetDeviceInfoList',['../classnvsipl_1_1INvSIPLQuery.html#a9c714878b8a62b929e409a0613ca9f22',1,'nvsipl::INvSIPLQuery']]],
+  ['geteofnvscisyncfence_4117',['GetEOFNvSciSyncFence',['../classnvsipl_1_1INvSIPLClient_1_1INvSIPLBuffer.html#a2c7bc3eab42364da92ba8d20ccd53020',1,'nvsipl::INvSIPLClient::INvSIPLBuffer']]],
+  ['geterrorgpioeventinfo_4118',['GetErrorGPIOEventInfo',['../classnvsipl_1_1INvSIPLCamera.html#a8931f2b886c136cb8d18bf0d07080e2b',1,'nvsipl::INvSIPLCamera']]],
+  ['getimageattributes_4119',['GetImageAttributes',['../classnvsipl_1_1INvSIPLCamera.html#a800f20b2abb58897aa3c672e61bf5874',1,'nvsipl::INvSIPLCamera']]],
+  ['getimagedata_4120',['GetImageData',['../classnvsipl_1_1INvSIPLClient_1_1INvSIPLNvMBuffer.html#af286c814ef7f21ff8ebf65fabb986d3a',1,'nvsipl::INvSIPLClient::INvSIPLNvMBuffer']]],
+  ['getimageembeddeddata_4121',['GetImageEmbeddedData',['../classnvsipl_1_1INvSIPLClient_1_1INvSIPLNvMBuffer.html#a01f6d68746e48682ce46fd565a3ac910',1,'nvsipl::INvSIPLClient::INvSIPLNvMBuffer']]],
+  ['getinstance_4122',['GetInstance',['../classnvsipl_1_1INvSIPLTrace.html#a4b64e02ef28192f28c8aae89407e3aa3',1,'nvsipl::INvSIPLTrace::GetInstance()'],['../classnvsipl_1_1INvSIPLCamera.html#a11634bf312e15a083d45f92ed8791b04',1,'nvsipl::INvSIPLCamera::GetInstance()'],['../classnvsipl_1_1INvSIPLQuery.html#a503e1348e29cce9a89c3f9698146369e',1,'nvsipl::INvSIPLQuery::GetInstance()'],['../classnvsipl_1_1INvSIPLQueryTrace.html#a654297d285e94572b3889257b4063751',1,'nvsipl::INvSIPLQueryTrace::GetInstance()']]],
+  ['getmaxerrorsize_4123',['GetMaxErrorSize',['../classnvsipl_1_1INvSIPLCamera.html#a28f141ec53d5c3b165ae7dacb9e4341f',1,'nvsipl::INvSIPLCamera']]],
+  ['getmoduleerrorinfo_4124',['GetModuleErrorInfo',['../classnvsipl_1_1INvSIPLCamera.html#ac068d23caf12c4f815c0601aec944257',1,'nvsipl::INvSIPLCamera']]],
+  ['getmoduleinterfaceprovider_4125',['GetModuleInterfaceProvider',['../classnvsipl_1_1INvSIPLCamera.html#a17b82cb80b571be6bc6f75c35549e4c7',1,'nvsipl::INvSIPLCamera']]],
+  ['getnitometadatafrommemory_4126',['GetNitoMetadataFromMemory',['../namespacenvsipl.html#a453eaa19650ad52029ea79e59a78ada2',1,'nvsipl']]],
+  ['getnoiseprofile_4127',['GetNoiseProfile',['../classnvsipl_1_1ISiplControlAuto.html#a3345b63fd93f0eedb4ee959105f8177b',1,'nvsipl::ISiplControlAuto']]],
+  ['getnvscibufimage_4128',['GetNvSciBufImage',['../classnvsipl_1_1INvSIPLClient_1_1INvSIPLNvMBuffer.html#a92494e890a0a77364e67a8fe50bf3267',1,'nvsipl::INvSIPLClient::INvSIPLNvMBuffer']]],
+  ['getplatformcfg_4129',['GetPlatformCfg',['../classnvsipl_1_1INvSIPLQuery.html#a7d356f9d25f2827a0c2e2c62865a88be',1,'nvsipl::INvSIPLQuery']]],
+  ['getplatformcfglist_4130',['GetPlatformCfgList',['../classnvsipl_1_1INvSIPLQuery.html#aeff56c5797393f30f98b37f55da9ffdd',1,'nvsipl::INvSIPLQuery']]],
+  ['getversion_4131',['GetVersion',['../classnvsipl_1_1INvSIPLQuery.html#af6034ae4e566aefff946ab8d9764066a',1,'nvsipl::INvSIPLQuery']]]
+];

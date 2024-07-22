@@ -1,0 +1,27 @@
+var structNvMediaEncodeInitializeParamsH264 =
+[
+    [ "enableAllIFrames", "group__x__h264__encoder__api.html#gaeaca0269c1eb52bd71abd96d62925510", null ],
+    [ "enableExternalMEHints", "group__x__h264__encoder__api.html#gafcdc03004c2def6c4bb2048c35099340", null ],
+    [ "enableExternalPictureRC", "group__x__h264__encoder__api.html#ga984def32a23e1b05f53b7e6b73fd3b39", null ],
+    [ "enableLimitedRGB", "group__x__h264__encoder__api.html#ga22a31370d136e447c04f78cc2dbce3f6", null ],
+    [ "enableMVC", "group__x__h264__encoder__api.html#gaab1b8629cd8fc8d01a9ed775e86bb919", null ],
+    [ "enableReconCRC", "group__x__h264__encoder__api.html#ga07297b6dd92f0ced89e524c926cf9bad", null ],
+    [ "enableROIEncode", "group__x__h264__encoder__api.html#ga0186b288206bd0dfd054d8d1e9f8a604", null ],
+    [ "enableSliceEncode", "group__x__h264__encoder__api.html#gac1384b4371c7650f8264ae7f22e4661d", null ],
+    [ "enableSourceHalfScaled", "group__x__h264__encoder__api.html#ga61154329731a2db0df5a206d24466cf3", null ],
+    [ "enableTwoPassRC", "group__x__h264__encoder__api.html#ga79c046f132f1e69da52000bbca400804", null ],
+    [ "encodeHeight", "group__x__h264__encoder__api.html#ga6c731170ab2b1ef254c1d16dff33d761", null ],
+    [ "encodeWidth", "group__x__h264__encoder__api.html#gacf461d1571ba67fb28500d5bd05d8f6c", null ],
+    [ "frameRateDen", "group__x__h264__encoder__api.html#ga6ee6ef202db3e33e6373d908e8c64128", null ],
+    [ "frameRateNum", "group__x__h264__encoder__api.html#ga7186fe023255f5a479e2b87aa332a8a9", null ],
+    [ "level", "group__x__h264__encoder__api.html#ga17f8fab61b37ed2556a57eefd0584015", null ],
+    [ "maxMEHintCountsPerBlock", "group__x__h264__encoder__api.html#ga2c2c085897ed7a65de762f9d26ede455", null ],
+    [ "maxNumRefFrames", "group__x__h264__encoder__api.html#gaf5dfd7806284f60180fedb104400663e", null ],
+    [ "mvcNumViews", "group__x__h264__encoder__api.html#ga637985967bbbd109e2797e5dc974f256", null ],
+    [ "profile", "group__x__h264__encoder__api.html#ga92ca8cadd3f21755b1166feb6d2631ec", null ],
+    [ "reserved", "group__x__h264__encoder__api.html#gad7d5f5674883a393c9fcd3ea6b6c3849", null ],
+    [ "reserved1", "group__x__h264__encoder__api.html#ga6c91c3986c3e68231013a2e525af41a1", null ],
+    [ "reserved2", "group__x__h264__encoder__api.html#ga8a3e99d74f803c3f437db0a406fe4042", null ],
+    [ "reserved3", "group__x__h264__encoder__api.html#gadd8533461a5f4fc0462e0f4ab52c25b2", null ],
+    [ "useBFramesAsRef", "group__x__h264__encoder__api.html#ga61308d007e21b41b298b0950b60beb90", null ]
+];

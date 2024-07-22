@@ -1,0 +1,4 @@
+<map id="NvMediaMotionVectorFrameMetaData" name="NvMediaMotionVectorFrameMetaData">
+<area shape="rect" id="node1" title="Motion vector array to get the required current frame stats." alt="" coords="5,109,188,151"/>
+<area shape="rect" id="node2" href="$structNvMediaMotionVectorMB__Metadata.html" title="Per Macroblock header information." alt="" coords="15,5,178,47"/>
+</map>

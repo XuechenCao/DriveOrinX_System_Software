@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['gain_4989',['gain',['../structnvsipl_1_1SiplControlAutoAwbGain.html#aeb295ac43a57015930907ca771f8fdcd',1,'nvsipl::SiplControlAutoAwbGain']]],
+  ['gcl_4990',['gcl',['../structosi__est__config.html#a95604d102a13f9531c59ff68c0a3cd99',1,'osi_est_config']]],
+  ['getbackwardupdates_4991',['GetBackwardUpdates',['../structNvMediaParserClientCb.html#a251dc7ea4b579f850ed5fd857e49c299',1,'NvMediaParserClientCb']]],
+  ['getclearhdr_4992',['GetClearHdr',['../structNvMediaParserClientCb.html#a539c0fd27c7946ef85671900c967078d',1,'NvMediaParserClientCb']]],
+  ['getdpbinfoformetadata_4993',['GetDpbInfoForMetadata',['../structNvMediaParserClientCb.html#a92d069783c326139cda7d867e51d1e0c',1,'NvMediaParserClientCb']]],
+  ['golden_5fref_5fframe_5fsign_5fbias_4994',['golden_ref_frame_sign_bias',['../structNvMediaPictureInfoVP8.html#a9c5357ac5c3d3a5d5f400e7ac771801a',1,'NvMediaPictureInfoVP8']]],
+  ['goldenreference_4995',['GoldenReference',['../structNvMediaPictureInfoVP8.html#aee66e948b6ccfae574cd3c071a1d33c0',1,'NvMediaPictureInfoVP8::GoldenReference()'],['../structNvMediaPictureInfoVP9.html#a064ec7cf57ef80c5b75a1e691da2344e',1,'NvMediaPictureInfoVP9::GoldenReference()']]],
+  ['goplength_4996',['gopLength',['../group__x__h264__encoder__api.html#ga0fdd44f7d822b3e45b46bd64a497d5ea',1,'NvMediaEncodeConfigH264::gopLength()'],['../group__x__h264__encoder__api.html#ga05c6b3a66aedd959fb50d60721869d5c',1,'NvMediaEncodeConfigH265::gopLength()'],['../group__x__h264__encoder__api.html#gaa0bc273409226583859b0a443f90fa93',1,'NvMediaEncodeConfigVP9::gopLength()'],['../group__x__h264__encoder__api.html#ga7507c59c44aa358b716fd41c8a97a02a',1,'NvMediaEncodeConfigAV1::gopLength()']]],
+  ['gpioidxs_4997',['gpioIdxs',['../structnvsipl_1_1NvSIPLPipelineNotifier_1_1NotificationData.html#a3c3cf41c351b1aab6efbae1886aad86b',1,'nvsipl::NvSIPLPipelineNotifier::NotificationData']]],
+  ['gpios_4998',['gpios',['../structnvsipl_1_1DeviceBlockInfo.html#aff33c1d74d8599a648ce0c5e819a25e7',1,'nvsipl::DeviceBlockInfo']]],
+  ['gpuid_4999',['gpuId',['../structNvSciBufAttrValGpuCache.html#a935ab04d0a70087bb247198bf10c5626',1,'NvSciBufAttrValGpuCache::gpuId()'],['../structNvSciBufAttrValGpuCompression.html#a0465cb67b9eb7d4f8d9080c78fcf0d7d',1,'NvSciBufAttrValGpuCompression::gpuId()']]],
+  ['grain_5fscale_5fshift_5000',['grain_scale_shift',['../struct__NvMediaPictureInfo__AV1.html#aae2f0e6640af801f43f31a7bca2ab117',1,'_NvMediaPictureInfo_AV1']]],
+  ['grain_5fseed_5001',['grain_seed',['../struct__NvMediaPictureInfo__AV1.html#ae01a8f4ad2a022636112cb2a1f0f7a5b',1,'_NvMediaPictureInfo_AV1']]],
+  ['gridsize_5002',['gridSize',['../structNvMediaIofaInitParams.html#a969bfa3b1ab8c75bdd70ae97749d04a6',1,'NvMediaIofaInitParams']]],
+  ['gtmsplinecontrolpoint_5003',['gtmSplineControlPoint',['../structnvsipl_1_1NvSiplISPGlobalToneMapInfo.html#ada3ac4b7df40d77b211908371e3ea1cd',1,'nvsipl::NvSiplISPGlobalToneMapInfo']]],
+  ['gtmsplineinfo_5004',['gtmSplineInfo',['../structnvsipl_1_1NvSiplControlInfo.html#a1b398b61a2859ecf406d19ed94f7d554',1,'nvsipl::NvSiplControlInfo']]]
+];

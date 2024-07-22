@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Usage","href":"common\/topics\/bootloader_setup\/Usage12.html","attributes":{"data-id":"Usage12"},"menu":{"hasChildren":false},"tocID":"Usage12-d14923e28839","next":"Usage12-d14923e28839"}]});

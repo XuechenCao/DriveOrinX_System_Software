@@ -1,0 +1,5 @@
+<map id="nvsipl::NvSIPLPipelineQueues" name="nvsipl::NvSIPLPipelineQueues">
+<area shape="rect" id="node1" title="This is the output structure for SetPipelineCfg()." alt="" coords="102,153,293,180"/>
+<area shape="rect" id="node2" href="$classnvsipl_1_1INvSIPLNotificationQueue.html" title="The interface to the notification queue." alt="" coords="5,5,176,47"/>
+<area shape="rect" id="node3" href="$classnvsipl_1_1INvSIPLFrameCompletionQueue.html" title="The interface to the frame completion queue." alt="" coords="200,5,408,47"/>
+</map>

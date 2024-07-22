@@ -1,0 +1,6 @@
+<map id="NvMediaEncodeConfigH264" name="NvMediaEncodeConfigH264">
+<area shape="rect" id="node1" title="Holds an H264 encoder configuration." alt="" coords="114,201,290,228"/>
+<area shape="rect" id="node2" href="$structNvMediaEncodeQP.html" title="Holds quantization parameters (QP) value for frames." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node3" href="$structNvMediaEncodeRCParams.html" title="Holds rate control configuration parameters." alt="" coords="117,111,287,137"/>
+<area shape="rect" id="node4" href="$structNvMediaEncodeConfigH264VUIParams.html" title="Holds H264 video usability information parameters." alt="" coords="312,111,551,137"/>
+</map>

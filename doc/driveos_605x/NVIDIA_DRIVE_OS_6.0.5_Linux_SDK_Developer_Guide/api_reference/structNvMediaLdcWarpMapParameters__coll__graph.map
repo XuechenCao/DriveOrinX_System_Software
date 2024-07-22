@@ -1,0 +1,5 @@
+<map id="NvMediaLdcWarpMapParameters" name="NvMediaLdcWarpMapParameters">
+<area shape="rect" id="node1" title="Holds the NvMedia LDC definition of a Warp Map." alt="" coords="79,95,290,121"/>
+<area shape="rect" id="node2" href="$structNvMediaLdcControlPoint.html" title="Represents a control point." alt="" coords="5,5,164,32"/>
+<area shape="rect" id="node3" href="$structNvMediaLdcRegionParameters.html" title="Holds the NvMedia LDC region configuration." alt="" coords="189,5,383,32"/>
+</map>

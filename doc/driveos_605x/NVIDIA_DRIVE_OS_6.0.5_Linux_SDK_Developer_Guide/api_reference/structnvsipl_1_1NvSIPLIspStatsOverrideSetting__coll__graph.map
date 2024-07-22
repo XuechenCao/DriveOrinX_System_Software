@@ -1,0 +1,11 @@
+<map id="nvsipl::NvSIPLIspStatsOverrideSetting" name="nvsipl::NvSIPLIspStatsOverrideSetting">
+<area shape="rect" id="node1" title="SIPL ISP Statistics Override Parameters." alt="" coords="867,72,1065,113"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPLocalAvgClipStats.html" title="Holds controls for local average and clip statistics (LAC Stats)." alt="" coords="593,140,761,181"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="281,121,435,147"/>
+<area shape="rect" id="node9" href="$structnvsipl_1_1NvSiplISPHistogramStatsOverride.html" title="SIPL ISP Histogram Statistics Override Params." alt="" coords="589,72,765,113"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,121,160,147"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1NvSiplISPStatisticsWindows.html" title="Defines the windows used in ISP stats calculations." alt="" coords="273,185,443,227"/>
+<area shape="rect" id="node6" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="19,193,146,219"/>
+<area shape="rect" id="node7" href="$structnvsipl_1_1NvSiplISPBadPixelStats.html" title="Holds controls for bad pixel statistics (BP Stats)." alt="" coords="595,5,760,47"/>
+<area shape="rect" id="node8" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="296,34,420,61"/>
+</map>

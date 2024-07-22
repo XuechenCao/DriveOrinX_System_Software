@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To run the sample on the target:","href":"common\/topics\/nvmedia_sample_apps\/nvmedia_nvsipl_sample_Torunthesampleonthetarget_11.html","attributes":{"data-id":"Torunthesampleonthetarget_11"},"menu":{"hasChildren":false},"tocID":"Torunthesampleonthetarget_11-d14923e21785","topics":[]}]});

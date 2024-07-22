@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Simple Stream Setup","href":"common\/topics\/nvsci\/SimpleStreamSetup15.html","attributes":{"data-id":"SimpleStreamSetup15"},"menu":{"hasChildren":false},"tocID":"SimpleStreamSetup15-d14923e13880","topics":[]}]});

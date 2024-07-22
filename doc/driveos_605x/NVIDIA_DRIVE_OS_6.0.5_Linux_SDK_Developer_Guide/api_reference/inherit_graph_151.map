@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classnvsipl_1_1INvSIPLClient_1_1INvSIPLBuffer.html" title="Abstract interface for SIPL buffers." alt="" coords="5,5,144,47"/>
+<area shape="rect" id="node2" href="$classnvsipl_1_1INvSIPLClient_1_1INvSIPLNvMBuffer.html" title="Describes a SIPL buffer containing an NvSciBufObj." alt="" coords="192,5,331,47"/>
+</map>

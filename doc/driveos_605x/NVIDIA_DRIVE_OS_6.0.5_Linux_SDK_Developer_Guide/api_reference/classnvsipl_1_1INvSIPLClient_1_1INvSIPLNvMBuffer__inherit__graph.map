@@ -1,0 +1,4 @@
+<map id="nvsipl::INvSIPLClient::INvSIPLNvMBuffer" name="nvsipl::INvSIPLClient::INvSIPLNvMBuffer">
+<area shape="rect" id="node1" title="Describes a SIPL buffer containing an NvSciBufObj." alt="" coords="5,95,144,136"/>
+<area shape="rect" id="node2" href="$classnvsipl_1_1INvSIPLClient_1_1INvSIPLBuffer.html" title="Abstract interface for SIPL buffers." alt="" coords="5,5,144,47"/>
+</map>

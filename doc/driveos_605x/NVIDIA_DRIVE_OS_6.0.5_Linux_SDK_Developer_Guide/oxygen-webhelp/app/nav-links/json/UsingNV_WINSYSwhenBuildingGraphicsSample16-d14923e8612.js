@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To switch to a different window system ","href":"common\/topics\/graphics_content\/Toswitchtoadifferentwindowsystem19.html","attributes":{"data-id":"Toswitchtoadifferentwindowsystem19"},"menu":{"hasChildren":false},"tocID":"Toswitchtoadifferentwindowsystem19-d14923e8620","topics":[]}]});

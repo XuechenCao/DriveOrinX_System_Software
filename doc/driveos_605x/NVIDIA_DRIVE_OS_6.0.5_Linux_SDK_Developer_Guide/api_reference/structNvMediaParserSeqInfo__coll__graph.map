@@ -1,0 +1,5 @@
+<map id="NvMediaParserSeqInfo" name="NvMediaParserSeqInfo">
+<area shape="rect" id="node1" title="Holds video sequence information." alt="" coords="134,95,285,121"/>
+<area shape="rect" id="node2" href="$structNvMediaContentLightLevelInfo.html" title="Content Light Level info for an H.265 picture." alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node3" href="$structNvMediaMasteringDisplayData.html" title="Mastering display data for an H.265 picture." alt="" coords="221,5,413,32"/>
+</map>

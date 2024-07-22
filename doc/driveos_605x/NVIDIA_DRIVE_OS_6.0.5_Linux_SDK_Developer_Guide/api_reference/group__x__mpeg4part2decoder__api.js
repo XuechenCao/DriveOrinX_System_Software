@@ -1,0 +1,32 @@
+var group__x__mpeg4part2decoder__api =
+[
+    [ "NvMediaPictureInfoMPEG4Part2", "structNvMediaPictureInfoMPEG4Part2.html", [
+      [ "alternate_vertical_scan_flag", "structNvMediaPictureInfoMPEG4Part2.html#a1adabcf9bbe27ce8bd9d6cc6345c3fc7", null ],
+      [ "backward_reference", "structNvMediaPictureInfoMPEG4Part2.html#a9faeb4ae2595319d22a053e9fa87602c", null ],
+      [ "bGMCConceal", "structNvMediaPictureInfoMPEG4Part2.html#ad38884a45c7ae3902088fca8fb102ef7", null ],
+      [ "data_partitioned", "structNvMediaPictureInfoMPEG4Part2.html#a13f03641ed47c5238c27c12dd91e3ac8", null ],
+      [ "divx_flags", "structNvMediaPictureInfoMPEG4Part2.html#a19ddc41a887321f509b046a900199f6c", null ],
+      [ "forward_reference", "structNvMediaPictureInfoMPEG4Part2.html#aad4f137a80e33efd5115eb2443209269", null ],
+      [ "interlaced", "structNvMediaPictureInfoMPEG4Part2.html#a50b3155ca28309675937e365634a0950", null ],
+      [ "intra_quantizer_matrix", "structNvMediaPictureInfoMPEG4Part2.html#af246bf904f8ee0861b2d52b0ded4b186", null ],
+      [ "nNumSlices", "structNvMediaPictureInfoMPEG4Part2.html#a6c30c5f87098d7ec2190b662de9104bd", null ],
+      [ "non_intra_quantizer_matrix", "structNvMediaPictureInfoMPEG4Part2.html#af0124519875757c80724e6452c5698a8", null ],
+      [ "pSliceDataOffsets", "structNvMediaPictureInfoMPEG4Part2.html#af21feaea3ba4e46904ab7d0c9329122c", null ],
+      [ "quant_type", "structNvMediaPictureInfoMPEG4Part2.html#a1b8fd051eeff8a8fe64380d8fa5517ae", null ],
+      [ "quarter_sample", "structNvMediaPictureInfoMPEG4Part2.html#ae51426226902de78991570eb152a8855", null ],
+      [ "resync_marker_disable", "structNvMediaPictureInfoMPEG4Part2.html#a822e4484bc13d0ab286fa43ab668d8eb", null ],
+      [ "reversible_vlc", "structNvMediaPictureInfoMPEG4Part2.html#a0bbd65400fa62022794341e2eda5a992", null ],
+      [ "rounding_control", "structNvMediaPictureInfoMPEG4Part2.html#a14f12ba8bf281320773df0c57fcea197", null ],
+      [ "short_video_header", "structNvMediaPictureInfoMPEG4Part2.html#a06c0ea9294a446da9fe1a3b598568004", null ],
+      [ "top_field_first", "structNvMediaPictureInfoMPEG4Part2.html#a44bb717b8ace2f3355dfec6348802024", null ],
+      [ "trb", "structNvMediaPictureInfoMPEG4Part2.html#a1af2dd0a1dbbad01ac51613567d1f69f", null ],
+      [ "trd", "structNvMediaPictureInfoMPEG4Part2.html#a9469648ca004bf9116798abc87d57452", null ],
+      [ "video_object_layer_height", "structNvMediaPictureInfoMPEG4Part2.html#aa7412603c75a41be38cc2327ec65eb97", null ],
+      [ "video_object_layer_width", "structNvMediaPictureInfoMPEG4Part2.html#aa462b70eb3f042ccfb320e2469a33d4b", null ],
+      [ "vop_coding_type", "structNvMediaPictureInfoMPEG4Part2.html#a5742c72307f63600413ceb96c9d1fb71", null ],
+      [ "vop_fcode_backward", "structNvMediaPictureInfoMPEG4Part2.html#a14ad6b1015ce44be5c467ae09d8d73b6", null ],
+      [ "vop_fcode_forward", "structNvMediaPictureInfoMPEG4Part2.html#a0ebb076fd539ed5de975ee115cdba2d1", null ],
+      [ "vop_time_increment_bitcount", "structNvMediaPictureInfoMPEG4Part2.html#a7df04abeaec92b65257bd594694ead4b", null ],
+      [ "vop_time_increment_resolution", "structNvMediaPictureInfoMPEG4Part2.html#a52db2cfe6b81040472d514d4b7a20107", null ]
+    ] ]
+];

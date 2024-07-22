@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSIPLDeviceBlockQueues" name="nvsipl::NvSIPLDeviceBlockQueues">
+<area shape="rect" id="node1" title="Holds the queues used by the client to receive device block event notifications." alt="" coords="6,109,175,151"/>
+<area shape="rect" id="node2" href="$classnvsipl_1_1INvSIPLNotificationQueue.html" title="The interface to the notification queue." alt="" coords="5,5,176,47"/>
+</map>

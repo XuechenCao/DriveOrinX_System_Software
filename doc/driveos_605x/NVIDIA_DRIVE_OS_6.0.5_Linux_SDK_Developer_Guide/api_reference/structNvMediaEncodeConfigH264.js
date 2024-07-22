@@ -1,0 +1,26 @@
+var structNvMediaEncodeConfigH264 =
+[
+    [ "adaptiveTransformMode", "group__x__h264__encoder__api.html#ga65fd58388a08ee95bed9d0e220740a3a", null ],
+    [ "bdirectMode", "group__x__h264__encoder__api.html#ga4364822e255c3702d9fe9d344a236b7b", null ],
+    [ "disableDeblockingFilterIDC", "group__x__h264__encoder__api.html#ga80a2240177f3168c43c2e3aa1a560bc8", null ],
+    [ "enableNewPreset", "group__x__h264__encoder__api.html#ga858704c66473d3c88ddde8c36d4c4e1c", null ],
+    [ "enableWeightedPrediction", "group__x__h264__encoder__api.html#ga27dcb071dfa2e1f884ce9175944ded95", null ],
+    [ "encPreset", "group__x__h264__encoder__api.html#ga560e772fc179b6829df1d373ec3aa8b8", null ],
+    [ "entropyCodingMode", "group__x__h264__encoder__api.html#ga9755cd8d6f5115524d674abb51960557", null ],
+    [ "features", "group__x__h264__encoder__api.html#ga2906c95f68e820db29248ed191c2d965", null ],
+    [ "gopLength", "group__x__h264__encoder__api.html#ga0fdd44f7d822b3e45b46bd64a497d5ea", null ],
+    [ "h264VUIParameters", "group__x__h264__encoder__api.html#ga8397a6e4e83e97f5940bdd7d5ad2330b", null ],
+    [ "idrPeriod", "group__x__h264__encoder__api.html#gaa2ab076737c271cccc5015b836b1f08c", null ],
+    [ "initQP", "group__x__h264__encoder__api.html#ga2ef5fd9450f97cf9b655ec449b7d00f1", null ],
+    [ "intraRefreshCnt", "group__x__h264__encoder__api.html#ga226ed8c9a5c032e4b12ab9f422707f27", null ],
+    [ "intraRefreshPeriod", "group__x__h264__encoder__api.html#ga21b942e9142dc2e2c055c550237c0aa0", null ],
+    [ "maxQP", "group__x__h264__encoder__api.html#gadf63cfaac8ef997d82996eea2e32e4f3", null ],
+    [ "maxSliceSizeInBytes", "group__x__h264__encoder__api.html#ga95aa6d72978e7e8f95a061d307a4fabd", null ],
+    [ "motionPredictionExclusionFlags", "group__x__h264__encoder__api.html#ga198abfd9eb815817e81a6c561a9dce5f", null ],
+    [ "numMacroblocksPerSlice", "group__x__h264__encoder__api.html#ga50b8a3bd27e159f47408081547209fab", null ],
+    [ "numSliceCountMinus1", "group__x__h264__encoder__api.html#ga36c2c479fddb0780b58cf407ace44991", null ],
+    [ "pocType", "group__x__h264__encoder__api.html#ga555c17a367b0db0655bc4f79f8d4ff02", null ],
+    [ "quality", "group__x__h264__encoder__api.html#gaa8528b5e4afee64d75d29ad0328051d8", null ],
+    [ "rcParams", "group__x__h264__encoder__api.html#ga87602a74c35cebc8e2c65c918de9cc54", null ],
+    [ "repeatSPSPPS", "group__x__h264__encoder__api.html#gab7c58a3a3b0638e786242a2aea0232d7", null ]
+];

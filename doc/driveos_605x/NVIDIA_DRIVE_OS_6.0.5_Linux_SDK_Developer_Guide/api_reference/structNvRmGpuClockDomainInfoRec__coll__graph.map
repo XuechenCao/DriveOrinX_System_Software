@@ -1,0 +1,4 @@
+<map id="NvRmGpuClockDomainInfoRec" name="NvRmGpuClockDomainInfoRec">
+<area shape="rect" id="node1" title="Clock domain info." alt="" coords="5,95,199,121"/>
+<area shape="rect" id="node2" href="$structNvRmGpuClockRangeRec.html" title="Frequency range for clock domain." alt="" coords="20,5,184,32"/>
+</map>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Decryption of VEK and Use by dm-crypt","href":"common\/topics\/security_concepts\/ObtainingtheInitialPassphrase35.html","attributes":{"data-id":"ObtainingtheInitialPassphrase35"},"menu":{"hasChildren":false},"tocID":"ObtainingtheInitialPassphrase35-d14923e26329","topics":[]}]});

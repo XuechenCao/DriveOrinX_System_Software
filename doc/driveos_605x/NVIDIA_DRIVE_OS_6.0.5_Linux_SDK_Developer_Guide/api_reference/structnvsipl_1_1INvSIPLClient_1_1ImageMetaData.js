@@ -1,0 +1,27 @@
+var structnvsipl_1_1INvSIPLClient_1_1ImageMetaData =
+[
+    [ "badPixelSettings", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a5d46730b68f052619bd55270d1ca43d8", null ],
+    [ "badPixelStats", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a73f6c45a00589e05dd0b958e5c37fe31", null ],
+    [ "badPixelStatsValid", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a9e2ad5b95582a55514a895d4a340ef12", null ],
+    [ "captureGlobalTimeStamp", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a148af02b0b608d0a7326b35c53723ac5", null ],
+    [ "controlInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#ab31b1bb837ab40f82b201b68931d5c3c", null ],
+    [ "errorFlag", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#aead5a1b066d171a52212002eb0e47cea", null ],
+    [ "frameCaptureStartTSC", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#af068bc1c721ce21ce1e2d1205c1ec637", null ],
+    [ "frameCaptureTSC", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a793ab19d562cc2fd844b49f41b076d5d", null ],
+    [ "frameSeqNumInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a962aa3291407cc0a32e3de4fdaf6bead", null ],
+    [ "frameTimestampInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a906ce3200cec23bcb4c31ae70b499a3e", null ],
+    [ "histogramSettings", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a4683359c95e933f1f410d434a33ff0c1", null ],
+    [ "histogramStats", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a04e9b3b802eff1f7e9fc528ada4e430f", null ],
+    [ "histogramStatsValid", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#abf29e757986ff8fa85120335746eb2de", null ],
+    [ "localAvgClipSettings", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a113de3c833922358785ced526066b2a3", null ],
+    [ "localAvgClipStats", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#ae2dcca2ea9f21c1d4128a53444bfe124", null ],
+    [ "localAvgClipStatsValid", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a763b2c0f1eedece4af7ac1dce4f6056c", null ],
+    [ "numExposures", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a7f1b6e05798592d6658d776c576fe17a", null ],
+    [ "sensorCRCInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#ab5b1b654e1d0cc7ce5c564ab4868cf19", null ],
+    [ "sensorExpInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a406abe8bed9bea0b65747aaeb28c3097", null ],
+    [ "sensorPWLInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a8b17d8bc2b146d4db3fe4a395af57c2f", null ],
+    [ "sensorReportInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#ad3ebc36ea02e982fc43cc62e4c6a2019", null ],
+    [ "sensorTempInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#aa8237ea1bb2c21b73964996276d71658", null ],
+    [ "sensorWBInfo", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#a7782f90521448ea0efdd395bcaf51220", null ],
+    [ "timeBase", "structnvsipl_1_1INvSIPLClient_1_1ImageMetaData.html#aefd2207ecca3774643c80452bc700ef4", null ]
+];

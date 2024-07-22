@@ -1,0 +1,7 @@
+<map id="nvsipl::NvSiplISPLocalAvgClipStats" name="nvsipl::NvSiplISPLocalAvgClipStats">
+<area shape="rect" id="node1" title="Holds controls for local average and clip statistics (LAC Stats)." alt="" coords="91,199,259,240"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="5,102,160,129"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplISPStatisticsWindows.html" title="Defines the windows used in ISP stats calculations." alt="" coords="185,95,354,136"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1NvSiplPoint.html" title="Defines the location of a point on a two&#45;dimensional object." alt="" coords="206,5,333,32"/>
+</map>

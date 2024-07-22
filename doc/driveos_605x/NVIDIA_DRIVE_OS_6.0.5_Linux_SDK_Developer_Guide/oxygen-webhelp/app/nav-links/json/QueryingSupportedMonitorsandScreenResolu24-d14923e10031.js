@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To query attached displays and detect available modes","href":"common\/topics\/window_system_stub\/Toqueryattacheddisplaysanddetectavailabl27.html","attributes":{"data-id":"Toqueryattacheddisplaysanddetectavailabl27"},"menu":{"hasChildren":false},"tocID":"Toqueryattacheddisplaysanddetectavailabl27-d14923e10039","topics":[]}]});

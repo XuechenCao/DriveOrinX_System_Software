@@ -1,0 +1,678 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="NVIDIA DRIVE ™ OS security services ensure the confidentiality of critical system secrets such as root keys and other device configuration information. They are also responsible for providing ..."/><meta name="DC.rights.owner" content="(C) Copyright 2022"/><meta name="copyright" content="(C) Copyright 2022"/><meta name="generator" content="DITA-OT"/><meta name="DC.type" content="concept"/><meta name="DC.relation" content="../../../common/topics/security_concepts/SecureBootandHardwareFuses4.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/PKCS_11Interface48.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/SecurityEngine80.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/PersistentKeyObjectSupport120.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/GeneratingPKCS_11KeyObjects124.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/SecureDebugUtilities180.html"/><meta name="DC.relation" content="../../../common/topics/security_concepts/Linux-basedDiskEncryption1.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="UnderstandingSecurity1"/><meta name="DC.language" content="en-US"/><title>Understanding Security | NVIDIA Docs</title><!--  Generated with Oxygen version 24.1, build number 2022041502.  --><meta name="wh-path2root" content="../../../"/><meta name="wh-toc-id" content="UnderstandingSecurity1-d14923e26049"/><meta name="wh-source-relpath" content="common/topics/security_concepts/UnderstandingSecurity1.dita"/><meta name="wh-out-relpath" content="common/topics/security_concepts/UnderstandingSecurity1.html"/>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
+    
+    <link rel="stylesheet" href="../../../oxygen-webhelp/lib/jquery-ui/jquery-ui.min.css"/>
+    
+    <!-- Template default styles  -->
+    <link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/app/topic-page.css?buildId=2022041502"/>
+    
+    
+    <script src="../../../oxygen-webhelp/lib/jquery/jquery-3.5.1.min.js"></script>
+    
+    <script data-main="../../../oxygen-webhelp/app/topic-page.js" src="../../../oxygen-webhelp/lib/requirejs/require.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/nvidia.webhelp.css?buildId=2022041502"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/nv-drive-styles.css?buildId=2022041502"/><link rel="stylesheet" type="text/css" href="../../../oxygen-webhelp/template/css/fonts.css?buildId=2022041502"/>
+    <meta name="description" content="Learn how to develop for NVIDIA DRIVE, a scalable computing platform that enables automakers and Tier-1 suppliers to accelerate production of autonomous vehicles."/>
+    <meta name="keywords" content="NVIDIA DRIVE OS,NVIDIA DRIVE SDK,NVIDIA DRIVE ORIN,Autonomous Vehicles,SDK Manager,NVIDIA DRIVE AGX,System Installation,CUDA,TensorRT"/>
+    <link href="https://docs.nvidia.com/images/nvidia.ico" rel="icon"/>
+    <link href="https://docs.nvidia.com/images/nvidia.ico" rel="shortcut icon"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.1/css/all.css" integrity="sha384-TxKWSXbsweFt0o2WqfkfJRRNVaPdzXJ/YLqgStggBVRREXkwU7OKz+xXtqOU4u8+" crossorigin="anonymous"/>
+    <script src="https://assets.adobedtm.com/5d4962a43b79/c1061d2c5e7b/launch-191c2462b890.min.js"></script>
+</head>
+
+    <body id="UnderstandingSecurity1" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        
+   <header class="wh_header" id="main-header" title="NVIDIA DRIVE OS Developer Guide">
+      <div class="navigation">
+         <nav class="global-nav" id="nv-dos-doc-global-nav">
+            <div class="nav-header desktop-nav">
+               <div class="nav-header-container">
+                  <!-- SOLR Search -->
+                  <div class="dlp-search-popup">
+                     <a id="nvidia-search-box-link" title="Search docs.nvidia.com" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                  </div>
+                  <div class="brand-container">
+                     <a class="brand-link nvidia-logo" href="https://www.nvidia.com/en-us/" title="Artificial Intelligence Computing Leadership from NVIDIA" aria-labelledby="nvidia_logo_desktop">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 974.7 179.7" version="1.1" viewBox="0 0 974.7 179.7" xml:space="preserve" width="110" height="44">
+                           <title></title>
+                           <path d="m962.1 144.1v-2.7h1.7c0.9 0 2.2 0.1 2.2 1.2s-0.7 1.5-1.8 1.5h-2.1m0 1.9h1.2l2.7 4.7h2.9l-3-4.9c1.5 0.1 2.7-1 2.8-2.5v-0.4c0-2.6-1.8-3.4-4.8-3.4h-4.3v11.2h2.5v-4.7m12.6-0.9c0-6.6-5.1-10.4-10.8-10.4s-10.8 3.8-10.8 10.4 5.1 10.4 10.8 10.4 10.8-3.8 10.8-10.4m-3.2 0c0.2 4.2-3.1 7.8-7.3 8h-0.3c-4.4 0.2-8.1-3.3-8.3-7.7s3.3-8.1 7.7-8.3 8.1 3.3 8.3 7.7c-0.1 0.1-0.1 0.2-0.1 0.3z"></path>
+                           <path d="m578.2 34v118h33.3v-118h-33.3zm-262-0.2v118.1h33.6v-91.7l26.2 0.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6v-65.2c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7 0.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6-12.2-16.5-30-19.7-56.6-19.7h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3v-67.1zm-134.7-25.6l-27.8 93.5-26.6-93.5h-36l38 118h48l38.4-118h-34zm231.4 118h33.3v-118h-33.3v118zm93.4-118l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7l-46.9-117.8h-44.5zm21.6 21.5l20.2 55.2h-41l20.8-55.2z"></path>
+                           <path fill="#76B900" d="m101.3 53.6v-16.2c1.6-0.1 3.2-0.2 4.8-0.2 44.4-1.4 73.5 38.2 73.5 38.2s-31.4 43.6-65.1 43.6c-4.5 0-8.9-0.7-13.1-2.1v-49.2c17.3 2.1 20.8 9.7 31.1 27l23.1-19.4s-16.9-22.1-45.3-22.1c-3-0.1-6 0.1-9 0.4m0-53.6v24.2l4.8-0.3c61.7-2.1 102 50.6 102 50.6s-46.2 56.2-94.3 56.2c-4.2 0-8.3-0.4-12.4-1.1v15c3.4 0.4 6.9 0.7 10.3 0.7 44.8 0 77.2-22.9 108.6-49.9 5.2 4.2 26.5 14.3 30.9 18.7-29.8 25-99.3 45.1-138.7 45.1-3.8 0-7.4-0.2-11-0.6v21.1h170.2v-179.7h-170.4zm0 116.9v12.8c-41.4-7.4-52.9-50.5-52.9-50.5s19.9-22 52.9-25.6v14h-0.1c-17.3-2.1-30.9 14.1-30.9 14.1s7.7 27.3 31 35.2m-73.5-39.5s24.5-36.2 73.6-40v-13.2c-54.4 4.4-101.4 50.4-101.4 50.4s26.6 77 101.3 84v-14c-54.8-6.8-73.5-67.2-73.5-67.2z"></path>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+               <!-- Mega menu code start -->
+               <!-- Mega menu code ends -->
+               <div class="nav-tools-container" style="display:none;">
+                  <div class="searchoverlay"></div>
+                  <ul class="nav-header-list" role="list" aria-label="Menu Tools">
+                  </ul>
+               </div>
+            </div>
+            <!-- Mobile navigation starts -->  
+            <div class="mobile-nav">
+               <div class="nav-header">
+                  <div class="nav-header-container">
+                     <div class="nav-tools-container">
+                        <ul class="nav-header-list" role="list">
+                           <li class="nav-header-item brand-container">
+                              <a class="brand-link pull-left nvidia-logo toplevel" href="https://www.nvidia.com/en-us/" title="Artificial Intelligence Computing Leadership from NVIDIA" alt="Artificial Intelligence Computing Leadership from NVIDIA" aria-labelledby="nvidia_logo_desktop">
+                                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 974.7 179.7" version="1.1" viewBox="0 0 974.7 179.7" xml:space="preserve" width="110" height="44">
+                                 <title></title>
+                                 <path d="m962.1 144.1v-2.7h1.7c0.9 0 2.2 0.1 2.2 1.2s-0.7 1.5-1.8 1.5h-2.1m0 1.9h1.2l2.7 4.7h2.9l-3-4.9c1.5 0.1 2.7-1 2.8-2.5v-0.4c0-2.6-1.8-3.4-4.8-3.4h-4.3v11.2h2.5v-4.7m12.6-0.9c0-6.6-5.1-10.4-10.8-10.4s-10.8 3.8-10.8 10.4 5.1 10.4 10.8 10.4 10.8-3.8 10.8-10.4m-3.2 0c0.2 4.2-3.1 7.8-7.3 8h-0.3c-4.4 0.2-8.1-3.3-8.3-7.7s3.3-8.1 7.7-8.3 8.1 3.3 8.3 7.7c-0.1 0.1-0.1 0.2-0.1 0.3z"></path>
+                                 <path d="m578.2 34v118h33.3v-118h-33.3zm-262-0.2v118.1h33.6v-91.7l26.2 0.1c8.6 0 14.6 2.1 18.7 6.5 5.3 5.6 7.4 14.7 7.4 31.2v53.9h32.6v-65.2c0-46.6-29.7-52.9-58.7-52.9h-59.8zm315.7 0.2v118h54c28.8 0 38.2-4.8 48.3-15.5 7.2-7.5 11.8-24.1 11.8-42.2 0-16.6-3.9-31.4-10.8-40.6-12.2-16.5-30-19.7-56.6-19.7h-46.7zm33 25.6h14.3c20.8 0 34.2 9.3 34.2 33.5s-13.4 33.6-34.2 33.6h-14.3v-67.1zm-134.7-25.6l-27.8 93.5-26.6-93.5h-36l38 118h48l38.4-118h-34zm231.4 118h33.3v-118h-33.3v118zm93.4-118l-46.5 117.9h32.8l7.4-20.9h55l7 20.8h35.7l-46.9-117.8h-44.5zm21.6 21.5l20.2 55.2h-41l20.8-55.2z"></path>
+                                 <path fill="#76B900" d="m101.3 53.6v-16.2c1.6-0.1 3.2-0.2 4.8-0.2 44.4-1.4 73.5 38.2 73.5 38.2s-31.4 43.6-65.1 43.6c-4.5 0-8.9-0.7-13.1-2.1v-49.2c17.3 2.1 20.8 9.7 31.1 27l23.1-19.4s-16.9-22.1-45.3-22.1c-3-0.1-6 0.1-9 0.4m0-53.6v24.2l4.8-0.3c61.7-2.1 102 50.6 102 50.6s-46.2 56.2-94.3 56.2c-4.2 0-8.3-0.4-12.4-1.1v15c3.4 0.4 6.9 0.7 10.3 0.7 44.8 0 77.2-22.9 108.6-49.9 5.2 4.2 26.5 14.3 30.9 18.7-29.8 25-99.3 45.1-138.7 45.1-3.8 0-7.4-0.2-11-0.6v21.1h170.2v-179.7h-170.4zm0 116.9v12.8c-41.4-7.4-52.9-50.5-52.9-50.5s19.9-22 52.9-25.6v14h-0.1c-17.3-2.1-30.9 14.1-30.9 14.1s7.7 27.3 31 35.2m-73.5-39.5s24.5-36.2 73.6-40v-13.2c-54.4 4.4-101.4 50.4-101.4 50.4s26.6 77 101.3 84v-14c-54.8-6.8-73.5-67.2-73.5-67.2z"></path>
+                                 </svg>     
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Mobile navigation ends -->       
+            <!-- Common sub nav and brand nav Starts -->
+            <div class="hide sub-brand-nav">
+               <div class="sub-brand-nav-container">
+                  <div class="brand-nav-left fade  in" style="width: 100%;">
+                     <div id="sub-brand">
+                        <a class="sub-brand-name " title="DRIVE OS Developer Home" href="https://developer.nvidia.com/drive/"> 
+                        <span class="sub-brand-label size-small">DRIVE OS for DRIVE AGX</span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Common sub nav and brand nav ends -->
+            <!-- Dark grey bar starts -->
+            <div class="breadcrumb breadCrumbNav">
+               <div class="subnav " data-auto-scrolling="no">
+                  <div class="subnav-container">
+                     <!-- Start DOS book title -->
+                     <div class="subnav-left pull-left m-wid-60">
+                        <div class="subnav-category">
+                           <div class=" wh_publication_title "><a href="../../../index.html"><span class="booktitle">  <span class="ph mainbooktitle">  <span class="keyword">NVIDIA DRIVE OS 6.0 Linux SDK Developer Guide</span>  </span>  <span class="ph booktitlealt">  <span class="keyword"></span>  </span>  </span></a></div>
+                        </div>
+                        
+                        
+                     </div>
+                     <!-- End DOS book title -->
+                     <!-- Start placeholder for DOS quick links -->
+                     <!--div class="subnav-right pull-right">
+                        <ul class="breadcrumb-list"></ul>
+                        </div-->
+                     <!-- End placeholder for DOS quick links -->
+                  </div>
+               </div>
+            </div>
+            <!-- Dark grey bar ends -->
+         </nav>
+      </div>
+   </header>
+
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="../../../search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            
+            
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="../../../index.html"><span>Home</span></a></span></li><li class="active"><div class="topicref" data-id="UnderstandingSecurity1"><div class="title"><a href="../../../common/topics/security_concepts/UnderstandingSecurity1.html">Understanding Security</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GettingStarted1-d14923e3244" class="topicref" data-id="GettingStarted1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GettingStarted1-d14923e3244-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/intro_sdk/GettingStarted1.html" id="GettingStarted1-d14923e3244-link">Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_pkj_hzg_hvb-d14923e3460" class="topicref" data-id="concept_pkj_hzg_hvb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_pkj_hzg_hvb-d14923e3460-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/installation/installation_stub.html" id="concept_pkj_hzg_hvb-d14923e3460-link">Installation</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_ewg_3yp_3rb-d14923e3786" class="topicref" data-id="concept_ewg_3yp_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_ewg_3yp_3rb-d14923e3786-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/board/Setup_and_Configurations.html" id="concept_ewg_3yp_3rb-d14923e3786-link">Setup and Configuration</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_nyv_4zp_3rb-d14923e5574" class="topicref" data-id="concept_nyv_4zp_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_nyv_4zp_3rb-d14923e5574-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/flashing_setup/Flashing_Header.html" id="concept_nyv_4zp_3rb-d14923e5574-link">Flashing</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_rqw_f1q_3rb-d14923e6700" class="topicref" data-id="concept_rqw_f1q_3rb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_rqw_f1q_3rb-d14923e6700-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/virtual_setup_pdk/Embedded_Software_Components_Header.html" id="concept_rqw_f1q_3rb-d14923e6700-link">Embedded Software Components</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="SystemSoftwareComponentsandInterfaces1-d14923e23990" class="topicref" data-id="SystemSoftwareComponentsandInterfaces1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action SystemSoftwareComponentsandInterfaces1-d14923e23990-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/sys_components/SystemSoftwareComponentsandInterfaces1.html" id="SystemSoftwareComponentsandInterfaces1-d14923e23990-link">System Software Components and Interfaces</a></div></div></li><li role="treeitem" aria-expanded="true" class="active"><div data-tocid="UnderstandingSecurity1-d14923e26049" class="topicref" data-id="UnderstandingSecurity1" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action UnderstandingSecurity1-d14923e26049-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/UnderstandingSecurity1.html" id="UnderstandingSecurity1-d14923e26049-link">Understanding Security</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="false"><div data-tocid="SecureBootandHardwareFuses4-d14923e26057" class="topicref" data-id="SecureBootandHardwareFuses4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action SecureBootandHardwareFuses4-d14923e26057-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/SecureBootandHardwareFuses4.html" id="SecureBootandHardwareFuses4-d14923e26057-link">Secure Boot and Hardware Fuses</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="PKCS_11Interface48-d14923e26145" class="topicref" data-id="PKCS_11Interface48" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action PKCS_11Interface48-d14923e26145-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/PKCS_11Interface48.html" id="PKCS_11Interface48-d14923e26145-link">PKCS#11 Interface</a></div></div></li><li role="treeitem"><div data-tocid="SecurityEngine80-d14923e26209" class="topicref" data-id="SecurityEngine80" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/SecurityEngine80.html" id="SecurityEngine80-d14923e26209-link">Security Engine</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="PersistentKeyObjectSupport120-d14923e26217" class="topicref" data-id="PersistentKeyObjectSupport120" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action PersistentKeyObjectSupport120-d14923e26217-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/PersistentKeyObjectSupport120.html" id="PersistentKeyObjectSupport120-d14923e26217-link">Persistent Key Object Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GeneratingPKCS_11KeyObjects124-d14923e26233" class="topicref" data-id="GeneratingPKCS_11KeyObjects124" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GeneratingPKCS_11KeyObjects124-d14923e26233-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/GeneratingPKCS_11KeyObjects124.html" id="GeneratingPKCS_11KeyObjects124-d14923e26233-link">Generating PKCS#11 Key Objects</a></div></div></li><li role="treeitem"><div data-tocid="SecureDebugUtilities180-d14923e26249" class="topicref" data-id="SecureDebugUtilities180" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/SecureDebugUtilities180.html" id="SecureDebugUtilities180-d14923e26249-link">Enabling JTAG Support on Secure Targets</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Linux-basedDiskEncryption1-d14923e26257" class="topicref" data-id="Linux-basedDiskEncryption1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Linux-basedDiskEncryption1-d14923e26257-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/security_concepts/Linux-basedDiskEncryption1.html" id="Linux-basedDiskEncryption1-d14923e26257-link">Linux-Based Disk Encryption</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="SystemProgramming1-d14923e26866" class="topicref" data-id="SystemProgramming1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action SystemProgramming1-d14923e26866-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/sys_programming/SystemProgramming1.html" id="SystemProgramming1-d14923e26866-link">System Programming</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="BootloaderProgramming1-d14923e28325" class="topicref" data-id="BootloaderProgramming1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action BootloaderProgramming1-d14923e28325-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/bootloader_setup/BootloaderProgramming1.html" id="BootloaderProgramming1-d14923e28325-link">Bootloader Programming</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="MassStoragePartitionConfiguration1-d14923e29163" class="topicref" data-id="MassStoragePartitionConfiguration1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action MassStoragePartitionConfiguration1-d14923e29163-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/partition_setup/MassStoragePartitionConfiguration1.html" id="MassStoragePartitionConfiguration1-d14923e29163-link">Mass Storage Partition Configuration</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Utilities1-d14923e31187" class="topicref" data-id="Utilities1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Utilities1-d14923e31187-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/Utilities1.html" id="Utilities1-d14923e31187-link">NVIDIA DRIVE Utilities</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="Manifest1-d14923e31771" class="topicref" data-id="Manifest1" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action Manifest1-d14923e31771-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/manifest_overview/Manifest1.html" id="Manifest1-d14923e31771-link">Manifest</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="concept_ctf_ff3_qvb-d14923e31806" class="topicref" data-id="concept_ctf_ff3_qvb" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action concept_ctf_ff3_qvb-d14923e31806-link" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/util_setup/device_tree_header.html" id="concept_ctf_ff3_qvb-d14923e31806-link">Device Tree</a></div></div></li><li role="treeitem"><div data-tocid="tocId-d14923e31919" class="topicref" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../api_reference/index.html" id="tocId-d14923e31919-link">API Reference</a></div></div></li><li role="treeitem"><div data-tocid="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1-d14923e31969" class="topicref" data-id="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/drive_os_third_party_licenses/NVIDIADRIVEOSThird-PartySoftwareLicen1.html" id="NVIDIADRIVEOS5.2Third-PartySoftwareLicen1-d14923e31969-link">NVIDIA DRIVE OS <span class="ph">6.0</span> Third-Party Software Licenses</a></div></div></li><li role="treeitem"><div data-tocid="LegalInformation1-d14923e31989" class="topicref" data-id="LegalInformation1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="../../../common/topics/legal/LegalInformation1.html" id="LegalInformation1-d14923e31989-link">Legal Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="ariaid-title1">
+   <h1 class="- topic/title title topictitle1" id="ariaid-title1">Understanding Security</h1>
+   <div class="- topic/body concept/conbody body conbody">
+      <section class="- topic/section section"><p class="- topic/p p">NVIDIA DRIVE<span class="- topic/tm tm"><span class="- topic/tmmark tmmark ">™</span></span> OS security services ensure the confidentiality of
+            critical system secrets such as root keys and other device configuration information.
+            They are also responsible for providing user-space applications running in the Guest OS,
+            the ability to offload cryptographic operations on-to SoC security hardware. These
+            services rely on the isolation provided by the virtualization system.</p><p class="- topic/p p">This section
+            describes the functionality and possible customization for these security services and
+            is broadly divided into subsections.</p><p class="- topic/p p">Refer to the appropriate subsection for
+            detailed information on the various services:</p><img class="- topic/image image" id="UnderstandingSecurity1__image_lcp_h4t_s5b" src="../../graphics/security_concepts/security_concepts_image1.png"/></section>
+      <section class="- topic/section section"><h2 class="- topic/title title sectiontitle">Acronyms and Abbreviations</h2>
+         
+         <p class="- topic/p p">The following acronyms are used throughout this section.</p>
+         <table class="- topic/table table frame-all" data-cols="2"><caption></caption><colgroup><col style="width:70.65pt"/><col style="width:331.1pt"/></colgroup><thead class="- topic/thead thead">
+                  <tr class="- topic/row">
+                     <th class="- topic/entry entry colsep-1 rowsep-1" id="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p table_head"> Term</p>
+                     </th>
+                     <th class="- topic/entry entry colsep-0 rowsep-1" id="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p table_head"> Definition</p>
+                     </th>
+                  </tr>
+               </thead><tbody class="- topic/tbody tbody">
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">ATF</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">ARM trusted firmware</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">BCT</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Boot Configuration Table</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">BDT</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Boot Device Tree</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">BR</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">BootROM</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">BR-BCT</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">BootROM Boot Configuration Table</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">CA</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Client Applications</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">CBC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Cipher Block Chaining</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">CMAC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">a block of Cipher-based Message Authentication code algorithm</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">EKS</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Encrypted Key Store</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">GP API</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Global Platform Application Programming Interface</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">HW</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Hardware</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">JTAG</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Joint Test Action Group IEEE 1149.1 Standard Test Access Port and
+                           Boundary-Scan Architecture</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">KEK</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Key Encryption Key</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">KROM</td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">The Key ROM (KROM in short) primarily contains two types of keys:</p>
+                        <p class="- topic/p p">• Wrapped Symmetric Keys</p>
+                        <p class="- topic/p p">• Public component of Asymmetric RSA Keys (Exponent only)</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">ODM</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Original Design Manufacturing</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">OEM</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Original Equipment Manufacturer</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">OpenSSL</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">A general purpose cryptography library that provides an open source
+                           implementation of the Secure Sockets Layer protocol.</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">OS</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Operating System</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">OSC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Oscillator</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">OTA</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Over-the-Air</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">PCT</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Platform Configuration Table</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">PKC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Public Key Cryptography</p>
+                     </td>
+                  </tr>
+                  
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">PolarSSL</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">also known as ARM-mbed</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">REE</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Rich Execution Environment</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">PSC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">Platform Security Controller</td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">ROM</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Read-only Memory</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">RPMB</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Replay protected memory block</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">RSA</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">An encryption mechanism that uses public and private keys.</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">RSASSA-PSS</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">RSA Signature Scheme with Appendix- Probabilistic Signature Scheme
+                           (cryptography)</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">SBK</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Secure Boot Key</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">SDK/PDK</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Software Development Kit / Platform Development Kit</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">SDRAM</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Synchronous Dynamic Random Access Memory</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">SE</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Security Engine Hardware</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">SS</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Secure Storage</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">TA</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Trusted Applications</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">TEE</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Trusted Execution Environment</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">TOS</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Trusted Operating System</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">TSC</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Tegra Secure Counter</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">UID</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Unique Identification</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-1" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">UUID</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-1" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Universal Unique Identification</p>
+                     </td>
+                  </tr>
+                  <tr class="- topic/row">
+                     <td class="- topic/entry entry colsep-1 rowsep-0" headers="UnderstandingSecurity1__entry__1">
+                        <p class="- topic/p p">VM</p>
+                     </td>
+                     <td class="- topic/entry entry colsep-0 rowsep-0" headers="UnderstandingSecurity1__entry__2">
+                        <p class="- topic/p p">Virtual Machine</p>
+                     </td>
+                  </tr>
+               </tbody></table>
+      </section>
+   </div>
+</article></main></div>
+                        
+                        <div class=" wh_child_links d-print-none "><nav aria-label="Child Links" role="navigation" class="- topic/related-links related-links"><ul class="ullinks"><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/SecureBootandHardwareFuses4.html">Secure Boot and Hardware Fuses</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/PKCS_11Interface48.html">PKCS#11 Interface</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/SecurityEngine80.html">Security Engine</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/PersistentKeyObjectSupport120.html">Persistent Key Object Support</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/GeneratingPKCS_11KeyObjects124.html">Generating PKCS#11 Key Objects</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/SecureDebugUtilities180.html">Enabling JTAG Support on Secure Targets</a></strong></li><li class="- topic/link link ulchildlink"><strong><a href="../../../common/topics/security_concepts/Linux-basedDiskEncryption1.html">Linux-Based Disk Encryption</a></strong></li></ul></nav></div>
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+   <script>
+      if (typeof _satellite !== "undefined") {_satellite.pageBottom();}
+    </script>
+   <script src="https://api-prod.nvidia.com/search/nvidia-search-library.js"></script>
+   <script>NvidiaSearchLibrary.BoxWidget.mount({
+      site: 'https://docs.nvidia.com',
+      language: 'en-us',
+      queryParam: 'q',
+      placeholder: 'Search docs...',
+      destination: 'https://docs.nvidia.com/drive/dnc-search.html',
+      triggerId: 'nvidia-search-box-link',
+      referenceId: 'nvidia-search-box-link'
+    });</script>
+
+        </div> 
+        <footer class="navbar navbar-default wh_footer">
+  <div class=" footer-container mx-auto ">
+    
+<div class="footer">
+    <!-- Footer -->
+    <div class="page-footer-wrapper" id="brandFooter">
+       <div class="page-footer">
+         <div class="nv-copyright-publication">
+         </div><div xmlns="" class="nv-pub"><div class="confidentiality_info">
+                Subject to Change | For test and development only.
+            </div><div class="generation_time"> Published: 11/30/2022 4:43 a.m. | 
+          <span>
+                PR-10720-6.0
+            </span></div><div></div></div>
+          <!-- START Social -->
+          <div class="page-footer__social">
+             <div class="page-footer__social__label">Follow DRIVE OS</div>
+             <a href="http://www.facebook.com/NVIDIA" class="page-footer__social__link facebook" target="_blank" alt="Follow GeForce on Facebook" title="Follow GeForce on Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="46" viewBox="0 0 22 46">
+                   <title>Facebook</title>
+                   <path d="M28.638,16.072V12.109a8.484,8.484,0,0,1,.085-1.381,2.648,2.648,0,0,1,.387-0.963,1.579,1.579,0,0,1,.974-0.656,7.1,7.1,0,0,1,1.791-.182h4.066V1h-6.5Q23.8,1,21.335,3.609T18.872,11.3v4.773H14V24h4.869V47h9.766V24h6.5L36,16.072h-7.36Z" transform="translate(-14 -1)"></path>
+                </svg>
+             </a>
+             <a href="http://twitter.com/nvidiadc" class="page-footer__social__link" target="_blank" alt="Follow GeForce on Twitter" title="Follow GeForce on Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="37.375" viewBox="0 0 46 37.375">
+                   <title>Twitter</title>
+                   <path d="M47,9.749a18.8,18.8,0,0,1-5.429,1.461,9.159,9.159,0,0,0,4.145-5.2,18.5,18.5,0,0,1-5.985,2.278,9.449,9.449,0,0,0-13.56-.219,9.092,9.092,0,0,0-2.759,6.673A10.469,10.469,0,0,0,23.65,16.9,26.266,26.266,0,0,1,12.8,14a26.733,26.733,0,0,1-8.6-6.965,9.243,9.243,0,0,0-1.284,4.76,9.192,9.192,0,0,0,1.139,4.5,9.421,9.421,0,0,0,3.065,3.358,9.35,9.35,0,0,1-4.262-1.2v0.117a9.117,9.117,0,0,0,2.145,6,9.273,9.273,0,0,0,5.415,3.256,9.757,9.757,0,0,1-2.481.321A12.021,12.021,0,0,1,6.164,28a9.45,9.45,0,0,0,8.816,6.541,18.457,18.457,0,0,1-11.706,4.03A20.123,20.123,0,0,1,1,38.456,26.177,26.177,0,0,0,15.476,42.69,27.548,27.548,0,0,0,24.9,41.1a23.966,23.966,0,0,0,7.532-4.264,28.514,28.514,0,0,0,5.386-6.147,27.4,27.4,0,0,0,3.371-7.257A26.806,26.806,0,0,0,42.3,15.852q0-.818-0.029-1.227A19.746,19.746,0,0,0,47,9.749Z" transform="translate(-1 -5.313)"></path>
+                </svg>
+             </a>
+             <a href="https://www.linkedin.com/company/nvidia" class="page-footer__social__link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+                   <title>LinkedIn</title>
+                   <path d="M1.569,16.3h9.883V45.985H1.569V16.3Zm42.317,2.711a10.635,10.635,0,0,0-8.235-3.4,11.875,11.875,0,0,0-3.43.464,7.783,7.783,0,0,0-2.605,1.3,11.16,11.16,0,0,0-2.86,3.142V16.3H16.9l0.03,1.438q0.03,1.438.03,8.866T16.9,45.985h9.853V29.421a7.242,7.242,0,0,1,.329-2.426,6.365,6.365,0,0,1,1.9-2.561,4.849,4.849,0,0,1,3.16-1.034,4.26,4.26,0,0,1,3.789,1.782,8.667,8.667,0,0,1,1.213,4.927V45.984H47V28.972Q47,22.412,43.886,19.014ZM6.57,2.015A5.637,5.637,0,0,0,2.542,3.468,4.823,4.823,0,0,0,1,7.137a4.909,4.909,0,0,0,1.5,3.654A5.4,5.4,0,0,0,6.45,12.258H6.51a5.642,5.642,0,0,0,4.058-1.468,4.742,4.742,0,0,0,1.512-3.654,5,5,0,0,0-1.527-3.669A5.475,5.475,0,0,0,6.57,2.015Z" transform="translate(-1 -2)"></path>
+                </svg>
+             </a>
+             <a href="http://www.youtube.com/user/nvidia" class="page-footer__social__link" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38.125" height="46" viewBox="0 0 576 512">
+                   <title>YouTube</title>
+                   <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+                </svg>
+             </a>
+          </div>
+          <!-- END Social -->
+       </div>
+    </div>
+    <!-- /Footer -->
+    <!-- Global footer -->
+    <div class="global-footer-container">
+       <div class="global-footer" id="globalFooter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="global-footer__logo" viewBox="0 407.8 1000 184.4" enable-background="new 0 407.8 1000 184.4" xml:space="preserve">
+             <title>NVIDIA</title>
+             <g id="nvidia-logo">
+                <path d="M987.1 555.7v-2.8h1.7c0.9 0 2.3 0.1 2.3 1.2 0 1.2-0.7 1.5-1.8 1.5H987.1M987.1 557.6h1.2l2.8 4.8h3l-3.1-5c1.5-0.1 2.9-0.8 2.9-3 0-2.7-1.8-3.5-4.9-3.5h-4.4v11.5h2.6L987.1 557.6M1000 556.7c0-6.8-5.2-10.7-11.1-10.7 -5.8 0-11.1 3.9-11.1 10.7 0 6.8 5.2 10.7 11.1 10.7S1000 563.5 1000 556.7M996.8 556.7c0 4.9-3.6 8.2-7.9 8.2l0 0c-4.4 0-7.9-3.3-7.9-8.2 0-4.9 3.6-8.2 7.9-8.2C993.2 548.6 996.8 551.9 996.8 556.7z"></path>
+                <path d="M593.2 442.7v121.1h34.2V442.7H593.2zM324.4 442.5v121.2h34.5v-94.1l26.9 0.1c8.8 0 15 2.2 19.2 6.7 5.4 5.7 7.6 15.1 7.6 32v55.3H446v-66.9c0-47.8-30.5-54.3-60.2-54.3C385.8 442.5 324.4 442.5 324.4 442.5zM648.3 442.7v121.1h55.4c29.5 0 39.2-4.9 49.6-15.9 7.4-7.7 12.1-24.7 12.1-43.3 0-17-4-32.2-11.1-41.7 -12.5-16.9-30.8-20.2-58.1-20.2H648.3zM682.2 469h14.7c21.3 0 35.1 9.5 35.1 34.4 0 24.8-13.7 34.4-35.1 34.4h-14.7V469zM544 442.7l-28.5 95.9 -27.3-95.9h-36.9l39 121.1h49.2l39.3-121.1H544zM781.4 563.7h34.2v-121h-34.2V563.7zM877.2 442.7l-47.7 121h33.7l7.6-21.3h56.5l7.2 21.3h36.6l-48.2-121H877.2zM899.4 464.8l20.7 56.6H878L899.4 464.8z"></path>
+                <path d="M103.9 462.8v-16.6c1.6-0.1 3.3-0.2 4.9-0.2 45.6-1.4 75.4 39.1 75.4 39.1s-32.2 44.8-66.8 44.8c-5 0-9.4-0.8-13.4-2.2v-50.5c17.7 2.2 21.3 10 32 27.7l23.7-20c0 0-17.3-22.7-46.5-22.7C110 462.3 106.9 462.5 103.9 462.8M103.9 407.8v24.8c1.6-0.1 3.3-0.2 4.9-0.3 63.3-2.2 104.6 51.9 104.6 51.9s-47.4 57.7-96.7 57.7c-4.5 0-8.7-0.4-12.7-1.1v15.4c3.4 0.4 7 0.7 10.6 0.7 46 0 79.2-23.5 111.4-51.2 5.3 4.3 27.2 14.7 31.7 19.2 -30.6 25.6-101.9 46.3-142.3 46.3 -3.9 0-7.6-0.2-11.3-0.6v21.6h174.7V407.8H103.9zM103.9 527.8v13.1c-42.5-7.6-54.3-51.8-54.3-51.8s20.4-22.6 54.3-26.3v14.4c0 0 0 0-0.1 0 -17.7-2.2-31.7 14.5-31.7 14.5S80 519.6 103.9 527.8M28.4 487.2c0 0 25.2-37.1 75.5-41v-13.5C48.2 437.2 0 484.4 0 484.4s27.3 79 103.9 86.3v-14.4C47.7 549.2 28.4 487.2 28.4 487.2z"></path>
+             </g>
+          </svg>
+          <div class="global-footer__region">
+             <a href="https://www.nvidia.com/object/country-selector.html" target="_self">
+                <!--<img class="global-footer__region__icon" src="https://images.nvidia.com/etc/designs/nvidiaGDC/clientlibs_base/images/country-selector/us.png" />-->
+                <span class="global-footer__region__label">
+                USA - United States
+                </span>
+             </a>
+          </div>
+          <ul class="global-footer__links">
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" target="_blank">Privacy Policy</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/privacy-center/" target="_blank">Manage My Privacy</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/legal-info/" target="_blank">Legal</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/about-nvidia/accessibility/" target="_blank">Accessibility</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/product-security/" target="_blank">Product Security</a>
+             </li>
+             <li>
+                <a href="https://www.nvidia.com/en-us/contact/" target="_blank">Contact</a>
+             </li>
+          </ul>
+          <div class="global-footer__copyright">Copyright © 2022 NVIDIA CORPORATION &amp; AFFILIATES. All rights reserved.</div>
+       </div>
+    </div>
+    <!-- /Global footer -->
+ </div>
+ 
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To change the size of the user data disk","href":"common\/topics\/security_concepts\/Tochangethesizeoftheuserdatadisk11.html","attributes":{"data-id":"Tochangethesizeoftheuserdatadisk11"},"menu":{"hasChildren":false},"tocID":"Tochangethesizeoftheuserdatadisk11-d14923e26281","topics":[]}]});

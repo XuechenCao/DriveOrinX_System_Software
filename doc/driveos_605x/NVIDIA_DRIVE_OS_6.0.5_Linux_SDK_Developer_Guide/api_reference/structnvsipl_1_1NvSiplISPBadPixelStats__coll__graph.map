@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSiplISPBadPixelStats" name="nvsipl::NvSiplISPBadPixelStats">
+<area shape="rect" id="node1" title="Holds controls for bad pixel statistics (BP Stats)." alt="" coords="5,95,171,136"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="26,5,150,32"/>
+</map>

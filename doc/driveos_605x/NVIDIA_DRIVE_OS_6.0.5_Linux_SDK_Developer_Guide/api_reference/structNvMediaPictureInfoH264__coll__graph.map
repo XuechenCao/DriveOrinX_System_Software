@@ -1,0 +1,5 @@
+<map id="NvMediaPictureInfoH264" name="NvMediaPictureInfoH264">
+<area shape="rect" id="node1" title="Picture parameter information for an H.264 picture." alt="" coords="124,95,284,121"/>
+<area shape="rect" id="node2" href="$structNvMediaReferenceFrameH264.html" title="Information about an H.264 reference frame." alt="" coords="5,5,200,32"/>
+<area shape="rect" id="node3" href="$structNvMediaSEIPayloadH264.html" title="H.264 SEI payload information Used by the parser only." alt="" coords="224,5,387,32"/>
+</map>

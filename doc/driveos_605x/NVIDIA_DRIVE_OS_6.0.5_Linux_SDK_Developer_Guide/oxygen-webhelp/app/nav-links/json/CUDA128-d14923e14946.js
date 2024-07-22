@@ -1,0 +1,1 @@
+define({"topics":[{"title":"CUDA APIs","href":"common\/topics\/nvsci\/CUDAAPIs132.html","attributes":{"data-id":"CUDAAPIs132"},"menu":{"hasChildren":false},"tocID":"CUDAAPIs132-d14923e14954","next":"CUDAAPIs132-d14923e14954"}]});

@@ -1,0 +1,7 @@
+<map id="NvMediaEncodePicParamsVP9" name="NvMediaEncodePicParamsVP9">
+<area shape="rect" id="node1" title="Holds VP9&#45;specific encoder picture parameters, which are sent on a per frame basis." alt="" coords="607,80,799,107"/>
+<area shape="rect" id="node2" href="$structNvMediaEncodeRCParams.html" title="Holds rate control configuration parameters." alt="" coords="243,21,414,48"/>
+<area shape="rect" id="node3" href="$structNvMediaEncodeQP.html" title="Holds quantization parameters (QP) value for frames." alt="" coords="5,21,132,48"/>
+<area shape="rect" id="node4" href="$structNvMediaEncodeExternalMeHintCountsPerBlocktype.html" title="Holds an external motion vector hint with counts per block type." alt="" coords="231,73,427,114"/>
+<area shape="rect" id="node5" href="$structNvMediaEncodeExternalMEHint.html" title="Holds an External Motion Vector hint." alt="" coords="231,139,427,165"/>
+</map>

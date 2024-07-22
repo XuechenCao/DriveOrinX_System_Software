@@ -1,0 +1,8 @@
+<map id="nvsipl::NvSiplISPHistogramStats" name="nvsipl::NvSiplISPHistogramStats">
+<area shape="rect" id="node1" title="Holds controls for histogram statistics (HIST Stats)." alt="" coords="240,288,416,329"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPRadialTF.html" title="Defines a radial transform." alt="" coords="112,199,280,225"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplISPSplineControlPoint.html" title="Defines a spline control point." alt="" coords="5,95,200,136"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="237,102,392,129"/>
+<area shape="rect" id="node5" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="237,5,392,32"/>
+<area shape="rect" id="node6" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="433,199,557,225"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="NvSciBufAttrValGpuCache" name="NvSciBufAttrValGpuCache">
+<area shape="rect" id="node1" title="Datatype specifying GPU cacheability preference for a particular GPU ID." alt="" coords="5,95,172,121"/>
+<area shape="rect" id="node2" href="$structNvSciRmGpuId.html" title="Defines GPU ID structure." alt="" coords="36,5,141,32"/>
+</map>

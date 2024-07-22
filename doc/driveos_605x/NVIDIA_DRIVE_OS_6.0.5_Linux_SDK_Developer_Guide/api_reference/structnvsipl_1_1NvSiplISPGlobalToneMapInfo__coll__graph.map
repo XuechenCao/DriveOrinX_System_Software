@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSiplISPGlobalToneMapInfo" name="nvsipl::NvSiplISPGlobalToneMapInfo">
+<area shape="rect" id="node1" title="Defines the global tone map spline." alt="" coords="11,109,194,151"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPSplineControlPoint.html" title="Defines a spline control point." alt="" coords="5,5,200,47"/>
+</map>

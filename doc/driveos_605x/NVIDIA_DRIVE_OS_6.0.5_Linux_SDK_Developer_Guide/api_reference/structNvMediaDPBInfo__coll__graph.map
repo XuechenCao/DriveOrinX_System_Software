@@ -1,0 +1,5 @@
+<map id="NvMediaDPBInfo" name="NvMediaDPBInfo">
+<area shape="rect" id="node1" title="Holds decoded Picture Buffer information." alt="" coords="111,95,226,121"/>
+<area shape="rect" id="node2" href="$structNvMediaDecCurrFrame.html" title="Holds decoded current frame information." alt="" coords="5,5,159,32"/>
+<area shape="rect" id="node3" href="$structNvMediaDecRefFrame.html" title="Holds decoded reference frame information." alt="" coords="183,5,330,32"/>
+</map>

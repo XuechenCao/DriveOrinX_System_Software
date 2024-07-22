@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Secure Boot Details with PKC Protection","href":"common\/topics\/security_concepts\/SecureBootDetailswithPKCProtection43.html","attributes":{"data-id":"SecureBootDetailswithPKCProtection43"},"menu":{"hasChildren":false},"tocID":"SecureBootDetailswithPKCProtection43-d14923e26137","topics":[]}]});

@@ -1,0 +1,6 @@
+<map id="nvsipl::NvSiplISPHistogramStatsOverride" name="nvsipl::NvSiplISPHistogramStatsOverride">
+<area shape="rect" id="node1" title="SIPL ISP Histogram Statistics Override Params." alt="" coords="76,184,252,225"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplISPEllipse.html" title="Defines an ellipse." alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node4" href="$structnvsipl_1_1NvSiplRect.html" title="Holds a rectangular region of a surface." alt="" coords="185,95,309,121"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="nvsipl::NvSiplISPEllipse" name="nvsipl::NvSiplISPEllipse">
+<area shape="rect" id="node1" title="Defines an ellipse." alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1NvSiplPointFloat.html" title="Defines the float&#45;precision location of a point on a two&#45;dimensional object." alt="" coords="5,5,160,32"/>
+</map>

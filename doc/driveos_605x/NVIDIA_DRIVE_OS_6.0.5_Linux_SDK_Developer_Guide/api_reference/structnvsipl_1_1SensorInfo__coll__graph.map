@@ -1,0 +1,5 @@
+<map id="nvsipl::SensorInfo" name="nvsipl::SensorInfo">
+<area shape="rect" id="node1" title="Defines the image sensor information." alt="" coords="11,213,137,240"/>
+<area shape="rect" id="node2" href="$structnvsipl_1_1SensorInfo_1_1VirtualChannelInfo.html" title="Defines the information of a virtual channel/single exposure." alt="" coords="5,109,143,151"/>
+<area shape="rect" id="node3" href="$structnvsipl_1_1SensorInfo_1_1Resolution.html" title="Defines the image resolution." alt="" coords="11,5,137,47"/>
+</map>

@@ -1,0 +1,1 @@
+define({"topics":[{"title":"I2C type-specific parameters","href":"common\/topics\/bootloader_setup\/I2Ctype-specificparameters71.html","attributes":{"data-id":"I2Ctype-specificparameters71"},"menu":{"hasChildren":false},"tocID":"I2Ctype-specificparameters71-d14923e28951","topics":[]}]});

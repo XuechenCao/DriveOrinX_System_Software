@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Vidmem Allocation","href":"common\/topics\/nvsci\/VidmemAllocation75.html","attributes":{"data-id":"VidmemAllocation75"},"menu":{"hasChildren":false},"tocID":"VidmemAllocation75-d14923e13707","topics":[]}]});

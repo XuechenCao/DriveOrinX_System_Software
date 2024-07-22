@@ -1,0 +1,5 @@
+<map id="_NvMediaPictureInfo_AV1" name="_NvMediaPictureInfo_AV1">
+<area shape="rect" id="node1" title="Holds picture parameter information for AV1 picture." alt="" coords="85,139,253,165"/>
+<area shape="rect" id="node2" href="$struct__NvMediaPicEntry__AV1.html" title=" " alt="" coords="5,13,157,39"/>
+<area shape="rect" id="node3" href="$struct__NvMediaPicEntry__AV1__Short.html" title=" " alt="" coords="181,5,333,47"/>
+</map>

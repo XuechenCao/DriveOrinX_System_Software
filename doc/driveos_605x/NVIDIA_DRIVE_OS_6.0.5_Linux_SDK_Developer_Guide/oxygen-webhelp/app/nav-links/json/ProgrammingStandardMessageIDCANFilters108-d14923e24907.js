@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To read standard filter configuration","href":"common\/topics\/sys_components\/Toreadstandardfilterconfiguration111.html","attributes":{"data-id":"Toreadstandardfilterconfiguration111"},"menu":{"hasChildren":false},"tocID":"Toreadstandardfilterconfiguration111-d14923e24915","topics":[]}]});

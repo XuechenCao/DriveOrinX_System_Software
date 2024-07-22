@@ -1,0 +1,1 @@
+define({"topics":[{"title":"To use the applications","href":"common\/topics\/window_system_stub\/Tousetheapplications39.html","attributes":{"data-id":"Tousetheapplications39"},"menu":{"hasChildren":false},"tocID":"Tousetheapplications39-d14923e9935","topics":[]}]});

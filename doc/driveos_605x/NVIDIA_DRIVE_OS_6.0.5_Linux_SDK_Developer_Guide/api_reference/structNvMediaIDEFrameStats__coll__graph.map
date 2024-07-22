@@ -1,0 +1,5 @@
+<map id="NvMediaIDEFrameStats" name="NvMediaIDEFrameStats">
+<area shape="rect" id="node1" title="Frame stats structure to get get ring entry idx and motion vector dump." alt="" coords="19,213,174,240"/>
+<area shape="rect" id="node2" href="$structNvMediaMotionVectorFrameMetaData.html" title="Motion vector array to get the required current frame stats." alt="" coords="5,109,188,151"/>
+<area shape="rect" id="node3" href="$structNvMediaMotionVectorMB__Metadata.html" title="Per Macroblock header information." alt="" coords="15,5,178,47"/>
+</map>

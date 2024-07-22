@@ -1,0 +1,6 @@
+<map id="NvMediaEncodeOutputExtradata" name="NvMediaEncodeOutputExtradata">
+<area shape="rect" id="node1" title="Holds the encoder output extradata configuration." alt="" coords="211,95,414,121"/>
+<area shape="rect" id="node2" href="$unionNvMediaEncodeCodecExData.html" title="Holds a codec&#45;specific extradata output." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node3" href="$structNvMediaEncodeFrameFullProp.html" title="Holds a encoder frames property." alt="" coords="215,5,410,32"/>
+<area shape="rect" id="node4" href="$structNvMediaFrameStats.html" title="Holds the statistics from encode profiling." alt="" coords="434,5,570,32"/>
+</map>

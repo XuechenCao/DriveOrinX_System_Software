@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Platform Software Stacks","href":"common\/topics\/archi\/PlatformSoftwareStacks1.html","attributes":{"data-id":"PlatformSoftwareStacks1"},"menu":{"hasChildren":true},"tocID":"PlatformSoftwareStacks1-d14923e3411","next":"PlatformSoftwareStacks1-d14923e3411"}]});

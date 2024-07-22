@@ -1,0 +1,1 @@
+define({"topics":[{"title":"Example NvSciIpc config file format","href":"common\/topics\/nvsci_nvsciipc\/ExampleNvSciIpcconfigfileformat15.html","attributes":{"data-id":"ExampleNvSciIpcconfigfileformat15"},"menu":{"hasChildren":false},"tocID":"ExampleNvSciIpcconfigfileformat15-d14923e15285","topics":[]}]});

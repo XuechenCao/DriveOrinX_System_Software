@@ -1,0 +1,8 @@
+<map id="NvMediaEncodePicParamsH265" name="NvMediaEncodePicParamsH265">
+<area shape="rect" id="node1" title="Holds H265&#45;specific encoder picture parameters." alt="" coords="613,109,812,136"/>
+<area shape="rect" id="node2" href="$structNvMediaEncodeRCParams.html" title="Holds rate control configuration parameters." alt="" coords="247,21,417,48"/>
+<area shape="rect" id="node3" href="$structNvMediaEncodeQP.html" title="Holds quantization parameters (QP) value for frames." alt="" coords="5,21,132,48"/>
+<area shape="rect" id="node4" href="$structNvMediaEncodeExternalMeHintCountsPerBlocktype.html" title="Holds an external motion vector hint with counts per block type." alt="" coords="234,73,430,114"/>
+<area shape="rect" id="node5" href="$structNvMediaEncodeH265SEIPayload.html" title="Holds an H265&#45;specific User SEI message." alt="" coords="231,139,433,165"/>
+<area shape="rect" id="node6" href="$structNvMediaEncodeExternalMEHint.html" title="Holds an External Motion Vector hint." alt="" coords="234,189,430,216"/>
+</map>

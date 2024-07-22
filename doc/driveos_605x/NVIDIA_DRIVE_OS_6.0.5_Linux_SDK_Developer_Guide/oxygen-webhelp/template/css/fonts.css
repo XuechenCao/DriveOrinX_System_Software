@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-Light.eot?#iefix");
+    src: url("../fonts/DINWebPro-Light.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-LightIta.eot?#iefix");
+    src: url("../fonts/DINWebPro-LightIta.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-LightIta.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro.eot?#iefix");
+    src: url("../fonts/DINWebPro.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-Ita.eot?#iefix");
+    src: url("../fonts/DINWebPro-Ita.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-Ita.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-Medium.eot?#iefix");
+    src: url("../fonts/DINWebPro-Medium.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-MediumIta.eot?#iefix");
+    src: url("../fonts/DINWebPro-MediumIta.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-MediumIta.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-Bold.eot?#iefix");
+    src: url("../fonts/DINWebPro-Bold.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DINWebPro";
+    src: url("../fonts/DINWebPro-BoldIta.eot?#iefix");
+    src: url("../fonts/DINWebPro-BoldIta.eot?#iefix") format("eot"),
+         url("../fonts/DINWebPro-BoldIta.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
